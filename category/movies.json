@@ -5539,6 +5539,30 @@
       "relevance": 3
     },
     {
+      "id": "196214",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/nfODBociNK6sU94mRo1lOz8LPcj.jpg",
+      "title": "Full Monty",
+      "original_title": "The Full Monty",
+      "year": 2023,
+      "date": "2023-06-14",
+      "genres": [
+        35,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Robert Carlyle",
+      "credits_selection_version": 2,
+      "score": 9.7012,
+      "tmdb_vote_average": 7.262,
+      "tmdb_vote_count": 42,
+      "tmdb_popularity": 2.4449,
+      "song": "You Can Leave Your Hat On - (From 'The Full Monty')",
+      "song_author": "Friday Night At The Movies",
+      "spotify_id": "3r1ZkrnJjPw01a6q448hzD"
+    },
+    {
       "id": "251",
       "tmdb_type": "movie",
       "type": 1,
