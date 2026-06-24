@@ -57,7 +57,8 @@
       "tmdb_popularity": 5.7185,
       "song": "Cruela De Vil - De \"101 Dalmatas\"",
       "song_author": "Cast - 101 Dalmatians",
-      "spotify_id": "4Ji5nMNjyZSHlrI8g51Th5"
+      "spotify_id": "4Ji5nMNjyZSHlrI8g51Th5",
+      "difficulty": 1
     },
     {
       "id": "812",
@@ -84,7 +85,8 @@
       "tmdb_popularity": 12.7662,
       "song": "Un Mundo Ideal",
       "song_author": "Miguel Morant, Angela Aloy",
-      "spotify_id": "0ponZFZOMfmjBVGMjKXnnS"
+      "spotify_id": "0ponZFZOMfmjBVGMjKXnnS",
+      "difficulty": 1
     },
     {
       "id": "12092",
@@ -110,7 +112,8 @@
       "tmdb_popularity": 8.6696,
       "song": "The Mad Tea Party / The Unbirthday Song / Twinkle Twinkle / Clean Cup Move Down / Mad Watch",
       "song_author": "Kathryn Beaumont, Edwynn, James Macdonald, Jerry Colonna",
-      "spotify_id": "0uDuqVAWCOYEH4qM3vWe1g"
+      "spotify_id": "0uDuqVAWCOYEH4qM3vWe1g",
+      "difficulty": 3
     },
     {
       "id": "9444",
@@ -136,7 +139,8 @@
       "tmdb_popularity": 6.0547,
       "song": "Once Upon a December",
       "song_author": "Christy Altomare",
-      "spotify_id": "3jMy7ITBiLgVwC15RBK9Hp"
+      "spotify_id": "3jMy7ITBiLgVwC15RBK9Hp",
+      "difficulty": 3
     },
     {
       "id": "95",
@@ -161,7 +165,8 @@
       "tmdb_popularity": 7.1744,
       "song": "I Don't Want to Miss a Thing - From \"Armageddon\" Soundtrack",
       "song_author": "Aerosmith",
-      "spotify_id": "225xvV8r1yKMHErSWivnow"
+      "spotify_id": "225xvV8r1yKMHErSWivnow",
+      "difficulty": 3
     },
     {
       "id": "3170",
@@ -186,7 +191,8 @@
       "tmdb_popularity": 5.8422,
       "song": "Little April Shower",
       "song_author": "Alice Sixer, Sally Mueller, Mary Moder, Betty Bayne, Amy Lou Barnes",
-      "spotify_id": "5lWFJtWyOSGW1sp7Amfhqn"
+      "spotify_id": "5lWFJtWyOSGW1sp7Amfhqn",
+      "difficulty": 3
     },
     {
       "id": "2287",
@@ -211,7 +217,8 @@
       "tmdb_popularity": 30.3962,
       "song": "Batman Theme - from \"Batman\" A Greenway Production in association with Twentieth Century-Fox Television",
       "song_author": "Neal Hefti & his Orchestra and Chorus",
-      "spotify_id": "4lwV7SpU0JSM1OIm0aIkNP"
+      "spotify_id": "4lwV7SpU0JSM1OIm0aIkNP",
+      "difficulty": 1
     },
     {
       "id": "177572",
@@ -238,7 +245,8 @@
       "tmdb_popularity": 20.3766,
       "song": "Immortals",
       "song_author": "Fall Out Boy",
-      "spotify_id": "3c1ItvzDDDpmDgLH9SIUp4"
+      "spotify_id": "3c1ItvzDDDpmDgLH9SIUp4",
+      "difficulty": 2
     },
     {
       "id": "4011",
@@ -262,7 +270,8 @@
       "tmdb_popularity": 6.9954,
       "song": "Main Titles - From \"Beetlejuice\" Soundtrack",
       "song_author": "Danny Elfman",
-      "spotify_id": "64ByydKWf67CJfIoPc8uLJ"
+      "spotify_id": "64ByydKWf67CJfIoPc8uLJ",
+      "difficulty": 2
     },
     {
       "id": "408",
@@ -287,7 +296,8 @@
       "tmdb_popularity": 9.0439,
       "song": "Ay Ho",
       "song_author": "Adri Soto, Manu Pilas, Juan Logar, Miguel Ángel Varela, José Escobosa, Luis Rod",
-      "spotify_id": "5yH6Qm41fGdhzjXfJUYSQj"
+      "spotify_id": "5yH6Qm41fGdhzjXfJUYSQj",
+      "difficulty": 1
     },
     {
       "id": "387",
@@ -312,7 +322,8 @@
       "tmdb_popularity": 13.1328,
       "song": "Tema de Bob Esponja Pantalones Cuadrados - Castilian Spanish Version",
       "song_author": "Spongebob Squarepants",
-      "spotify_id": "76GD1r0NxetwEPuChQRwMN"
+      "spotify_id": "76GD1r0NxetwEPuChQRwMN",
+      "difficulty": 1
     },
     {
       "id": "12",
@@ -337,7 +348,8 @@
       "tmdb_popularity": 18.8626,
       "song": "Nemo Egg (Main Title)",
       "song_author": "Thomas Newman",
-      "spotify_id": "7jSQaXLzpLHjSQTev2krvT"
+      "spotify_id": "7jSQaXLzpLHjSQTev2krvT",
+      "difficulty": 3
     },
     {
       "id": "25707",
@@ -362,7 +374,8 @@
       "tmdb_popularity": 11.851,
       "song": "Campeones (Oliver y Benji)",
       "song_author": "Oliver y Benji",
-      "spotify_id": "6B4XeMyN3KkTE8tArmjl76"
+      "spotify_id": "6B4XeMyN3KkTE8tArmjl76",
+      "difficulty": 1
     },
     {
       "id": "920",
@@ -388,7 +401,8 @@
       "tmdb_popularity": 13.669,
       "song": "Life is a Highway",
       "song_author": "Rascal Flatts",
-      "spotify_id": "5gB2IrxOCX2j9bMnHKP38i"
+      "spotify_id": "5gB2IrxOCX2j9bMnHKP38i",
+      "difficulty": 3
     },
     {
       "id": "118",
@@ -414,7 +428,8 @@
       "tmdb_popularity": 11.3617,
       "song": "Oompa Loompa (Reprise)",
       "song_author": "Hugh Grant",
-      "spotify_id": "6oQyijuAVv8HMvT5kok5EQ"
+      "spotify_id": "6oQyijuAVv8HMvT5kok5EQ",
+      "difficulty": 1
     },
     {
       "id": "354912",
@@ -440,7 +455,8 @@
       "tmdb_popularity": 19.6064,
       "song": "Recuérdame (Arrullo)",
       "song_author": "Gael Garcia Bernal, Lucy Hernández",
-      "spotify_id": "4fU3wz8wbjWZea4YYF04iR"
+      "spotify_id": "4fU3wz8wbjWZea4YYF04iR",
+      "difficulty": 1
     },
     {
       "id": "10191",
@@ -466,7 +482,8 @@
       "tmdb_popularity": 13.1034,
       "song": "Test Drive - From How To Train Your Dragon Music From The Motion Picture",
       "song_author": "John Powell",
-      "spotify_id": "2QTDuJIGKUjR7E2Q6KupIh"
+      "spotify_id": "2QTDuJIGKUjR7E2Q6KupIh",
+      "difficulty": 3
     },
     {
       "id": "5341",
@@ -492,7 +509,8 @@
       "tmdb_popularity": 4.1007,
       "song": "D' Artacán y los Tres Mosqueperros",
       "song_author": "Popitos",
-      "spotify_id": "1jcHFS977X9dTZSuQCaJCi"
+      "spotify_id": "1jcHFS977X9dTZSuQCaJCi",
+      "difficulty": 1
     },
     {
       "id": "2849",
@@ -517,7 +535,8 @@
       "tmdb_popularity": 2.6141,
       "song": "Soy un Gnomo",
       "song_author": "Los Gnomos",
-      "spotify_id": "6Gy51tM0x48Sj1knSLCy5Q"
+      "spotify_id": "6Gy51tM0x48Sj1knSLCy5Q",
+      "difficulty": 1
     },
     {
       "id": "150540",
@@ -544,7 +563,8 @@
       "tmdb_popularity": 22.5657,
       "song": "Bundle of Joy",
       "song_author": "Michael Giacchino",
-      "spotify_id": "3eTgg18rKBD30Hef1gv0wz"
+      "spotify_id": "3eTgg18rKBD30Hef1gv0wz",
+      "difficulty": 3
     },
     {
       "id": "3763",
@@ -569,7 +589,8 @@
       "tmdb_popularity": 29.5649,
       "song": "Dinosaurs Main TV Show Theme",
       "song_author": "Toners",
-      "spotify_id": "3h54jmmCPMjvhSeaLDfdaA"
+      "spotify_id": "3h54jmmCPMjvhSeaLDfdaA",
+      "difficulty": 2
     },
     {
       "id": "57911",
@@ -597,7 +618,8 @@
       "tmdb_popularity": 33.6468,
       "song": "Doraemon (El Gat Còsmic)",
       "song_author": "SX3",
-      "spotify_id": "4EneW8XefkTE4MJXpjnx79"
+      "spotify_id": "4EneW8XefkTE4MJXpjnx79",
+      "difficulty": 1
     },
     {
       "id": "12971",
@@ -622,7 +644,8 @@
       "tmdb_popularity": 73.5465,
       "song": "Dragon Ball Z - Opening Galego",
       "song_author": "América de Vigo, Arturo Sabugueiro",
-      "spotify_id": "0i6a6sDDd2dAuUBcJRaUzA"
+      "spotify_id": "0i6a6sDDd2dAuUBcJRaUzA",
+      "difficulty": 1
     },
     {
       "id": "11360",
@@ -646,7 +669,8 @@
       "tmdb_popularity": 5.4978,
       "song": "Baby Mine",
       "song_author": "Sharon Rooney",
-      "spotify_id": "6INxatmclLB6v1ZIVO3ypS"
+      "spotify_id": "6INxatmclLB6v1ZIVO3ypS",
+      "difficulty": 3
     },
     {
       "id": "601",
@@ -671,7 +695,8 @@
       "tmdb_popularity": 10.5109,
       "song": "Flying - From \"E.T. The Extra-Terrestrial\" Soundtrack",
       "song_author": "John Williams",
-      "spotify_id": "7lMb4MqMMBbApnMWHp1wC5"
+      "spotify_id": "7lMb4MqMMBbApnMWHp1wC5",
+      "difficulty": 2
     },
     {
       "id": "162",
@@ -696,7 +721,8 @@
       "tmdb_popularity": 7.6285,
       "song": "Introduction (Titles)",
       "song_author": "Danny Elfman",
-      "spotify_id": "55n2WpwjQnIM1lvmxkzllb"
+      "spotify_id": "55n2WpwjQnIM1lvmxkzllb",
+      "difficulty": 3
     },
     {
       "id": "11688",
@@ -723,7 +749,8 @@
       "tmdb_popularity": 9.7897,
       "song": "Run Llama Run - From \"The Emperor's New Groove\"/Score",
       "song_author": "John Debney",
-      "spotify_id": "0is3TXic9WVC1IONbQnl9b"
+      "spotify_id": "0is3TXic9WVC1IONbQnl9b",
+      "difficulty": 2
     },
     {
       "id": "1516",
@@ -748,7 +775,8 @@
       "tmdb_popularity": 79.8287,
       "song": "Theme - From \"The A-Team\"",
       "song_author": "Daniel Caine Orchestra",
-      "spotify_id": "4cdHlUOUlw0GCtq4yJGMn1"
+      "spotify_id": "4cdHlUOUlw0GCtq4yJGMn1",
+      "difficulty": 1
     },
     {
       "id": "417859",
@@ -775,7 +803,8 @@
       "tmdb_popularity": 7.4569,
       "song": "The Puss Suite",
       "song_author": "Henry Jackman, Gavin Greenaway, Everton Nelson, Peter Lale, Josephine Knight, John Barclay, Frank Ricotti, Paul Clarvis, Gary Kettel, Los Profesionales, Ben Fordham, Metro Voices, Rodrigo y Gabriela",
-      "spotify_id": "4zdBd6huRbj7PV4rPPEHFh"
+      "spotify_id": "4zdBd6huRbj7PV4rPPEHFh",
+      "difficulty": 3
     },
     {
       "id": "1891",
@@ -800,7 +829,8 @@
       "tmdb_popularity": 11.4608,
       "song": "Star Wars (Main Theme)",
       "song_author": "John Williams, London Symphony Orchestra",
-      "spotify_id": "0XCPLJ6fczJ0QErkAOICy5"
+      "spotify_id": "0XCPLJ6fczJ0QErkAOICy5",
+      "difficulty": 1
     },
     {
       "id": "4035",
@@ -827,7 +857,8 @@
       "tmdb_popularity": 7.3707,
       "song": "Inspector Gadget",
       "song_author": "Sesam-O",
-      "spotify_id": "3Mn9t8Lkv1zLpKJOD2P4qX"
+      "spotify_id": "3Mn9t8Lkv1zLpKJOD2P4qX",
+      "difficulty": 1
     },
     {
       "id": "10545",
@@ -852,7 +883,8 @@
       "tmdb_popularity": 7.3554,
       "song": "Las Campanas de Notre Dame (De \"El Jorobado de Notre Dame\" / \"The Hunchback Of Notre Dame\")",
       "song_author": "Palomitas",
-      "spotify_id": "1jxKoHtETFPDElFgFiJYPp"
+      "spotify_id": "1jxKoHtETFPDElFgFiJYPp",
+      "difficulty": 2
     },
     {
       "id": "9325",
@@ -877,7 +909,8 @@
       "tmdb_popularity": 6.6011,
       "song": "Busca Lo Más Vital",
       "song_author": "AD Santos, Germán Valdés",
-      "spotify_id": "2Yy18WPd9Ho4RTJHE64boS"
+      "spotify_id": "2Yy18WPd9Ho4RTJHE64boS",
+      "difficulty": 1
     },
     {
       "id": "9016",
@@ -904,7 +937,8 @@
       "tmdb_popularity": 7.5928,
       "song": "I'm Still Here (Jim's Theme) - From \"Treasure Planet\"/Soundtrack Version",
       "song_author": "John Rzeznik",
-      "spotify_id": "6BfOhpHADzrvKN2kMPTMPv"
+      "spotify_id": "6BfOhpHADzrvKN2kMPTMPv",
+      "difficulty": 3
     },
     {
       "id": "1892",
@@ -928,7 +962,8 @@
       "tmdb_popularity": 15.2649,
       "song": "The Fresh Prince of Bel-Air",
       "song_author": "DJ Jazzy Jeff & The Fresh Prince",
-      "spotify_id": "0UREO3QWbXJW3gOUXpK1am"
+      "spotify_id": "0UREO3QWbXJW3gOUXpK1am",
+      "difficulty": 2
     },
     {
       "id": "9837",
@@ -954,7 +989,8 @@
       "tmdb_popularity": 6.6169,
       "song": "The Plagues",
       "song_author": "Ralph Fiennes, Amick Byram",
-      "spotify_id": "3buDoGEwFbwS8ozgA5o3lA"
+      "spotify_id": "3buDoGEwFbwS8ozgA5o3lA",
+      "difficulty": 3
     },
     {
       "id": "8587",
@@ -979,7 +1015,8 @@
       "tmdb_popularity": 25.1719,
       "song": "El ciclo de la vida/Nants' Ingonyama",
       "song_author": "Maria Ayo, Lebo M.",
-      "spotify_id": "1eXWRiZxFKmB4ZJOiAur5b"
+      "spotify_id": "1eXWRiZxFKmB4ZJOiAur5b",
+      "difficulty": 1
     },
     {
       "id": "105864",
@@ -1004,7 +1041,8 @@
       "tmdb_popularity": 9.097,
       "song": "",
       "song_author": "",
-      "spotify_id": ""
+      "spotify_id": "",
+      "difficulty": 3
     },
     {
       "id": "976573",
@@ -1030,7 +1068,8 @@
       "tmdb_popularity": 16.4816,
       "song": "Steal The Show",
       "song_author": "LAUV",
-      "spotify_id": "0SccFtYdj75y6lL2OW10Cf"
+      "spotify_id": "0SccFtYdj75y6lL2OW10Cf",
+      "difficulty": 2
     },
     {
       "id": "85",
@@ -1054,7 +1093,8 @@
       "tmdb_popularity": 11.4193,
       "song": "Raiders March",
       "song_author": "John Williams",
-      "spotify_id": "5duZVZ4m1TaJDTCbeHG8TG"
+      "spotify_id": "5duZVZ4m1TaJDTCbeHG8TG",
+      "difficulty": 1
     },
     {
       "id": "568124",
@@ -1080,7 +1120,8 @@
       "tmdb_popularity": 10.6987,
       "song": "No se habla de Bruno",
       "song_author": "Carolina Gaitán - La Gaita, Mauro Castillo, Daniela Sierra, Juanse Diez, Isabel Garcés, Olga Lucía Vives, Encanto - Elenco",
-      "spotify_id": "5QKk5N5xJQGsWMhPM80Kfv"
+      "spotify_id": "5QKk5N5xJQGsWMhPM80Kfv",
+      "difficulty": 1
     },
     {
       "id": "38757",
@@ -1105,7 +1146,8 @@
       "tmdb_popularity": 15.4544,
       "song": "Cuando mi vida va a comenzar",
       "song_author": "Carmen López",
-      "spotify_id": "0WSO4MJCg5nCW261pGQHao"
+      "spotify_id": "0WSO4MJCg5nCW261pGQHao",
+      "difficulty": 1
     },
     {
       "id": "1584",
@@ -1130,7 +1172,8 @@
       "tmdb_popularity": 5.8059,
       "song": "School of Rock",
       "song_author": "School of Rock Cast",
-      "spotify_id": "5khUNWckizKC1tDTRRjvJp"
+      "spotify_id": "5khUNWckizKC1tDTRRjvJp",
+      "difficulty": 2
     },
     {
       "id": "10315",
@@ -1156,7 +1199,8 @@
       "tmdb_popularity": 6.1535,
       "song": "Mr. Fox in the Fields",
       "song_author": "Alexandre Desplat",
-      "spotify_id": "1Clu0gbMFEvJ3bdpgmlMvh"
+      "spotify_id": "1Clu0gbMFEvJ3bdpgmlMvh",
+      "difficulty": 2
     },
     {
       "id": "109445",
@@ -1182,7 +1226,8 @@
       "tmdb_popularity": 16.9234,
       "song": "¡Sueltalo!",
       "song_author": "Gisela",
-      "spotify_id": "59g9tRMoYFB0eVeqamx3Pp"
+      "spotify_id": "59g9tRMoYFB0eVeqamx3Pp",
+      "difficulty": 1
     },
     {
       "id": "621",
@@ -1206,7 +1251,8 @@
       "tmdb_popularity": 9.375,
       "song": "You're The One That I Want - From “Grease”",
       "song_author": "John Travolta, Olivia Newton-John",
-      "spotify_id": "0B9x2BRHqj3Qer7biM3pU3"
+      "spotify_id": "0B9x2BRHqj3Qer7biM3pU3",
+      "difficulty": 2
     },
     {
       "id": "20352",
@@ -1233,7 +1279,8 @@
       "tmdb_popularity": 17.4175,
       "song": "Despicable Me",
       "song_author": "Pharrell Williams",
-      "spotify_id": "2EOMe4XAS7U6UA1mhDs9tP"
+      "spotify_id": "2EOMe4XAS7U6UA1mhDs9tP",
+      "difficulty": 3
     },
     {
       "id": "118340",
@@ -1258,7 +1305,8 @@
       "tmdb_popularity": 7.8881,
       "song": "Hooked On A Feeling",
       "song_author": "Blue Swede, Björn Skifs",
-      "spotify_id": "6Ac4NVYYl2U73QiTt11ZKd"
+      "spotify_id": "6Ac4NVYYl2U73QiTt11ZKd",
+      "difficulty": 3
     },
     {
       "id": "671",
@@ -1282,7 +1330,8 @@
       "tmdb_popularity": 36.5515,
       "song": "Prologue",
       "song_author": "John Williams",
-      "spotify_id": "6CeCOC2zx1qS8mQNYHe6IM"
+      "spotify_id": "6CeCOC2zx1qS8mQNYHe6IM",
+      "difficulty": 2
     },
     {
       "id": "29452",
@@ -1307,7 +1356,8 @@
       "tmdb_popularity": 7.7093,
       "song": "Heidi - \"Abuelito Díme Tú\"",
       "song_author": "Las Series De Tu Vida Performers",
-      "spotify_id": "3bOK8XGkfg4YxHTK83WOIq"
+      "spotify_id": "3bOK8XGkfg4YxHTK83WOIq",
+      "difficulty": 2
     },
     {
       "id": "76492",
@@ -1333,7 +1383,8 @@
       "tmdb_popularity": 10.4283,
       "song": "I'm In Love With a Monster",
       "song_author": "Fifth Harmony",
-      "spotify_id": "0hO71r8vbnrXSaXVrR9ptF"
+      "spotify_id": "0hO71r8vbnrXSaXVrR9ptF",
+      "difficulty": 3
     },
     {
       "id": "11970",
@@ -1361,7 +1412,8 @@
       "tmdb_popularity": 11.2753,
       "song": "De cero a héroe",
       "song_author": "Susan Martín, Helen Quiroga, Paula Bas, Cani González, María Caneda",
-      "spotify_id": "1kIKCaRH85flXDJUKoxlUJ"
+      "spotify_id": "1kIKCaRH85flXDJUKoxlUJ",
+      "difficulty": 1
     },
     {
       "id": "425",
@@ -1387,7 +1439,8 @@
       "tmdb_popularity": 18.674,
       "song": "Send Me On My Way",
       "song_author": "Rusted Root",
-      "spotify_id": "6XK6Zw6JkFsHXzAcMWNiIr"
+      "spotify_id": "6XK6Zw6JkFsHXzAcMWNiIr",
+      "difficulty": 2
     },
     {
       "id": "62177",
@@ -1413,7 +1466,8 @@
       "tmdb_popularity": 14.7576,
       "song": "Volaré",
       "song_author": "Jim Sutherland, Éamon Doorley, Julie Fowlis",
-      "spotify_id": "5shTabslF7YcSgiur85Z28"
+      "spotify_id": "5shTabslF7YcSgiur85Z28",
+      "difficulty": 1
     },
     {
       "id": "8844",
@@ -1438,7 +1492,8 @@
       "tmdb_popularity": 2.9639,
       "song": "Jumanji - Theme Song",
       "song_author": "Voidoid",
-      "spotify_id": "6fpJbBSi56YFvWOe7BhNCh"
+      "spotify_id": "6fpJbBSi56YFvWOe7BhNCh",
+      "difficulty": 3
     },
     {
       "id": "329",
@@ -1462,7 +1517,8 @@
       "tmdb_popularity": 7.8716,
       "song": "Theme From Jurassic Park",
       "song_author": "John Williams",
-      "spotify_id": "2TZbQZXOuR8osP2AK8yYMN"
+      "spotify_id": "2TZbQZXOuR8osP2AK8yYMN",
+      "difficulty": 2
     },
     {
       "id": "1885",
@@ -1487,7 +1543,8 @@
       "tmdb_popularity": 7.348,
       "song": "You're The Best",
       "song_author": "Joe \"Bean\" Esposito",
-      "spotify_id": "4zXa17K83Pp6N2yXdVc2sv"
+      "spotify_id": "4zXa17K83Pp6N2yXdVc2sv",
+      "difficulty": 3
     },
     {
       "id": "9502",
@@ -1513,7 +1570,8 @@
       "tmdb_popularity": 15.4805,
       "song": "Hero",
       "song_author": "Hans Zimmer, John Powell",
-      "spotify_id": "5lIeoIcBl2DPwPQtzSC0al"
+      "spotify_id": "5lIeoIcBl2DPwPQtzSC0al",
+      "difficulty": 2
     },
     {
       "id": "10620",
@@ -1539,7 +1597,8 @@
       "tmdb_popularity": 5.1629,
       "song": "La Abeja Maya",
       "song_author": "Sesam-O",
-      "spotify_id": "4t0k6avmxLGEKTTjmRDEut"
+      "spotify_id": "4t0k6avmxLGEKTTjmRDEut",
+      "difficulty": 1
     },
     {
       "id": "10882",
@@ -1565,7 +1624,8 @@
       "tmdb_popularity": 7.8004,
       "song": "Eres Tú el Príncipe Azul",
       "song_author": "Coros - La Bella Durmiente",
-      "spotify_id": "4d2EiN35xmFmta9A6P8Szu"
+      "spotify_id": "4d2EiN35xmFmta9A6P8Szu",
+      "difficulty": 3
     },
     {
       "id": "10020",
@@ -1591,7 +1651,8 @@
       "tmdb_popularity": 11.9428,
       "song": "La Bella y La Bestia",
       "song_author": "María Caneda",
-      "spotify_id": "6b6X92pQUHyFsB735NDu3R"
+      "spotify_id": "6b6X92pQUHyFsB735NDu3R",
+      "difficulty": 1
     },
     {
       "id": "11224",
@@ -1617,7 +1678,8 @@
       "tmdb_popularity": 9.8983,
       "song": "Bíbbidi-Bábbidi-Bu",
       "song_author": "Norma Herrera",
-      "spotify_id": "73bBCJFr4r56c6JcqrWQWf"
+      "spotify_id": "73bBCJFr4r56c6JcqrWQWf",
+      "difficulty": 1
     },
     {
       "id": "10340",
@@ -1644,7 +1706,8 @@
       "tmdb_popularity": 5.5882,
       "song": "Bella Notte",
       "song_author": "Miguel Ángel Muro, Miguel Antelo",
-      "spotify_id": "0z7vx75ouq3Ffxs4DxzDBX"
+      "spotify_id": "0z7vx75ouq3Ffxs4DxzDBX",
+      "difficulty": 3
     },
     {
       "id": "2907",
@@ -1668,7 +1731,8 @@
       "tmdb_popularity": 5.9454,
       "song": "Addams Family Theme",
       "song_author": "HeathisHuman",
-      "spotify_id": "3ZqPSBYMFYVtCZv9Un5dc0"
+      "spotify_id": "3ZqPSBYMFYVtCZv9Un5dc0",
+      "difficulty": 1
     },
     {
       "id": "137106",
@@ -1695,7 +1759,8 @@
       "tmdb_popularity": 8.308,
       "song": "Everything Is AWESOME!!! (feat. The Lonely Island)",
       "song_author": "Tegan and Sara, The Lonely Island",
-      "spotify_id": "58vnVBWfKWIjSVvKTZJly2"
+      "spotify_id": "58vnVBWfKWIjSVvKTZJly2",
+      "difficulty": 2
     },
     {
       "id": "854",
@@ -1721,7 +1786,8 @@
       "tmdb_popularity": 9.6039,
       "song": "Cuban Pete [In the Style of \"Jim Carrey\"]",
       "song_author": "Done Again",
-      "spotify_id": "6SPlMB3xv7SWPGcn6Z4FIn"
+      "spotify_id": "6SPlMB3xv7SWPGcn6Z4FIn",
+      "difficulty": 2
     },
     {
       "id": "3933",
@@ -1746,7 +1812,8 @@
       "tmdb_popularity": 14.9132,
       "song": "Remains of the Day",
       "song_author": "Danny Elfman",
-      "spotify_id": "6dw3oQI0NhwYxMiNfVRIHA"
+      "spotify_id": "6dw3oQI0NhwYxMiNfVRIHA",
+      "difficulty": 2
     },
     {
       "id": "114772",
@@ -1772,7 +1839,8 @@
       "tmdb_popularity": 2.6325,
       "song": "La Pantera Rosa",
       "song_author": "Henry Salomon y su Orquesta",
-      "spotify_id": "57XxT3WFlEenQnyA6AJpL0"
+      "spotify_id": "57XxT3WFlEenQnyA6AJpL0",
+      "difficulty": 1
     },
     {
       "id": "57532",
@@ -1796,7 +1864,8 @@
       "tmdb_popularity": 84.7662,
       "song": "Patrulla Canina - Cancion de la Serie",
       "song_author": "Pups Superstars",
-      "spotify_id": "4N61sb12odJo93PFMdI8wr"
+      "spotify_id": "4N61sb12odJo93PFMdI8wr",
+      "difficulty": 1
     },
     {
       "id": "10501",
@@ -1823,7 +1892,8 @@
       "tmdb_popularity": 4.9184,
       "song": "Someday Out Of The Blue (Theme From El Dorado) - From \"The Road To El Dorado\" Soundtrack",
       "song_author": "Elton John",
-      "spotify_id": "1MtLyoONKfK41bQONcARsn"
+      "spotify_id": "1MtLyoONKfK41bQONcARsn",
+      "difficulty": 3
     },
     {
       "id": "10144",
@@ -1848,7 +1918,8 @@
       "tmdb_popularity": 10.4483,
       "song": "Bajo el mar - de \"La Sirenita\"/Banda Sonora Original",
       "song_author": "Vincente Borland, Coro - La Sirenita",
-      "spotify_id": "3F32sDOVMpyVWOvIoYv1IM"
+      "spotify_id": "3F32sDOVMpyVWOvIoYv1IM",
+      "difficulty": 1
     },
     {
       "id": "5150",
@@ -1874,7 +1945,8 @@
       "tmdb_popularity": 2.7858,
       "song": "La Vuelta al Mundo de Willy Fog",
       "song_author": "Mocedades",
-      "spotify_id": "7x0EnUueyLCMmeuSDBdL5u"
+      "spotify_id": "7x0EnUueyLCMmeuSDBdL5u",
+      "difficulty": 1
     },
     {
       "id": "411",
@@ -1899,7 +1971,8 @@
       "tmdb_popularity": 19.8093,
       "song": "Can't Take It In - Soundtrack",
       "song_author": "Imogen Heap",
-      "spotify_id": "0sgKfGPPnQzHsX9SiaAnwA"
+      "spotify_id": "0sgKfGPPnQzHsX9SiaAnwA",
+      "difficulty": 3
     },
     {
       "id": "803796",
@@ -1925,7 +1998,8 @@
       "tmdb_popularity": 34.9977,
       "song": "Golden",
       "song_author": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",
-      "spotify_id": "1CPZ5BxNNd0n0nF4Orb9JS"
+      "spotify_id": "1CPZ5BxNNd0n0nF4Orb9JS",
+      "difficulty": 1
     },
     {
       "id": "160",
@@ -1951,7 +2025,8 @@
       "tmdb_popularity": 38.22,
       "song": "Teenage Mutant Ninja Turtles Cartoon Opening Theme (1987)",
       "song_author": "Teenage Mutant Ninja Turtles",
-      "spotify_id": "4QpB8RyVWCAcZ5bWRk14bo"
+      "spotify_id": "4QpB8RyVWCAcZ5bWRk14bo",
+      "difficulty": 3
     },
     {
       "id": "11544",
@@ -1977,7 +2052,8 @@
       "tmdb_popularity": 11.4737,
       "song": "Hawaiian Roller Coaster Ride",
       "song_author": "Mark Keali'i Ho'omalu, Kamehameha Schools Children's Chorus",
-      "spotify_id": "7GmiJVBAzWNikX5VkNQg85"
+      "spotify_id": "7GmiJVBAzWNikX5VkNQg85",
+      "difficulty": 2
     },
     {
       "id": "9336",
@@ -2001,7 +2077,8 @@
       "tmdb_popularity": 5.2812,
       "song": "Main Theme - From \"Police Academy\"",
       "song_author": "London Music Works",
-      "spotify_id": "57feAoAx0AkUZL9YskARaF"
+      "spotify_id": "57feAoAx0AkUZL9YskARaF",
+      "difficulty": 1
     },
     {
       "id": "259502",
@@ -2026,7 +2103,8 @@
       "tmdb_popularity": 0.5726,
       "song": "The Warner Bros. Fanfare / Merrily We Roll Along (The Merrie Melodies Theme)",
       "song_author": "George Daugherty, Sydney Symphony Orchestra",
-      "spotify_id": "4Bls4Mx9SA5Zv3gax0PVuz"
+      "spotify_id": "4Bls4Mx9SA5Zv3gax0PVuz",
+      "difficulty": 1
     },
     {
       "id": "10112",
@@ -2052,7 +2130,8 @@
       "tmdb_popularity": 7.2978,
       "song": "Todos Quieren Ser Un Gato Jazz",
       "song_author": "Esteman, Caloncho, Mon Laferte",
-      "spotify_id": "7JFMaCszgik6Ay4WWeG1i3"
+      "spotify_id": "7JFMaCszgik6Ay4WWeG1i3",
+      "difficulty": 1
     },
     {
       "id": "620",
@@ -2076,7 +2155,8 @@
       "tmdb_popularity": 7.3248,
       "song": "Ghostbusters - from the \"Ghostbusters\" Original Motion Picture Soundtrack",
       "song_author": "Ray Parker Jr.",
-      "spotify_id": "0phGofl3ppS5Itk1zM9eKa"
+      "spotify_id": "0phGofl3ppS5Itk1zM9eKa",
+      "difficulty": 1
     },
     {
       "id": "9340",
@@ -2101,7 +2181,8 @@
       "tmdb_popularity": 7.0306,
       "song": "The Goonies 'R' Good Enough - From \"The Goonies\" Soundtrack",
       "song_author": "Cyndi Lauper",
-      "spotify_id": "1hY60LJWE6B9gHV1Oi9kE5"
+      "spotify_id": "1hY60LJWE6B9gHV1Oi9kE5",
+      "difficulty": 3
     },
     {
       "id": "9806",
@@ -2127,7 +2208,8 @@
       "tmdb_popularity": 20.9175,
       "song": "The Incredits",
       "song_author": "Michael Giacchino",
-      "spotify_id": "3M7GXKcmP9WzW8zoOeTSTJ"
+      "spotify_id": "3M7GXKcmP9WzW8zoOeTSTJ",
+      "difficulty": 2
     },
     {
       "id": "14836",
@@ -2152,7 +2234,8 @@
       "tmdb_popularity": 31.4911,
       "song": "End Credits",
       "song_author": "Bruno Coulais, The Children's Choir Of Nice",
-      "spotify_id": "0poF86R3x9YMsdinTBtQmv"
+      "spotify_id": "0poF86R3x9YMsdinTBtQmv",
+      "difficulty": 3
     },
     {
       "id": "5687",
@@ -2179,7 +2262,8 @@
       "tmdb_popularity": 30.4553,
       "song": "La Canción de los Pitufos",
       "song_author": "Grupo Chis",
-      "spotify_id": "6UcD1vLgiUYDB4pvmPYdg0"
+      "spotify_id": "6UcD1vLgiUYDB4pvmPYdg0",
+      "difficulty": 3
     },
     {
       "id": "456",
@@ -2204,7 +2288,8 @@
       "tmdb_popularity": 181.2248,
       "song": "\"The Simpsons\" Main Title Theme",
       "song_author": "The Simpsons",
-      "spotify_id": "7CD8O3gZ5NB7jkfO5cv0WD"
+      "spotify_id": "7CD8O3gZ5NB7jkfO5cv0WD",
+      "difficulty": 1
     },
     {
       "id": "953",
@@ -2230,7 +2315,8 @@
       "tmdb_popularity": 16.3038,
       "song": "Yo Quiero Marcha, Marcha",
       "song_author": "Música Para Tu Abuela",
-      "spotify_id": "69nLNihCDn19Kpa7ZirUaJ"
+      "spotify_id": "69nLNihCDn19Kpa7ZirUaJ",
+      "difficulty": 1
     },
     {
       "id": "433",
@@ -2255,7 +2341,8 @@
       "tmdb_popularity": 5.9952,
       "song": "Supercalifragilisticoespialidoso",
       "song_author": "La Santa Cecilia",
-      "spotify_id": "4RpJiMN8lg77qHkFpb9A02"
+      "spotify_id": "4RpJiMN8lg77qHkFpb9A02",
+      "difficulty": 1
     },
     {
       "id": "10830",
@@ -2280,7 +2367,8 @@
       "tmdb_popularity": 9.2013,
       "song": "Little Bitty Pretty One (From \"Matilda\")",
       "song_author": "Angus Huttlestone",
-      "spotify_id": "08CAaGF8ZGRqs1c3TuzUQ7"
+      "spotify_id": "08CAaGF8ZGRqs1c3TuzUQ7",
+      "difficulty": 3
     },
     {
       "id": "607",
@@ -2306,7 +2394,8 @@
       "tmdb_popularity": 11.3998,
       "song": "Men In Black - From \"Men In Black\" Soundtrack",
       "song_author": "Will Smith",
-      "spotify_id": "2FK7fxjzQEXD7Z32HSF0Hl"
+      "spotify_id": "2FK7fxjzQEXD7Z32HSF0Hl",
+      "difficulty": 2
     },
     {
       "id": "92060",
@@ -2331,7 +2420,8 @@
       "tmdb_popularity": 6.6313,
       "song": "Thriller",
       "song_author": "Michael Jackson",
-      "spotify_id": "3S2R0EVwBSAVMd5UMgKTL0"
+      "spotify_id": "3S2R0EVwBSAVMd5UMgKTL0",
+      "difficulty": 2
     },
     {
       "id": "585",
@@ -2357,7 +2447,8 @@
       "tmdb_popularity": 29.4668,
       "song": "If I Didn't Have You",
       "song_author": "Billy Crystal, John Goodman",
-      "spotify_id": "7xf3S6Bv8hDqOtevZou602"
+      "spotify_id": "7xf3S6Bv8hDqOtevZou602",
+      "difficulty": 3
     },
     {
       "id": "10674",
@@ -2382,7 +2473,8 @@
       "tmdb_popularity": 16.6918,
       "song": "Voy a Hacer Todo un Hombre de Tí",
       "song_author": "Pablo Perea, Juan Manuel Escamilla, Miguel Morant, Adel Hakki, José Sánchez Mota, María Caneda, Chorus - Mulan",
-      "spotify_id": "3wwnCL9mlH3BaVEMm9wTiF"
+      "spotify_id": "3wwnCL9mlH3BaVEMm9wTiF",
+      "difficulty": 1
     },
     {
       "id": "65930",
@@ -2407,7 +2499,8 @@
       "tmdb_popularity": 20.6552,
       "song": "THE DAY",
       "song_author": "PornoGraffitti",
-      "spotify_id": "1tjOClAkdMxDfYPO0xvGbG"
+      "spotify_id": "1tjOClAkdMxDfYPO0xvGbG",
+      "difficulty": 1
     },
     {
       "id": "16859",
@@ -2432,7 +2525,8 @@
       "tmdb_popularity": 8.6825,
       "song": "ルージュの伝言",
       "song_author": "Yumi Arai",
-      "spotify_id": "1jw992uwXhqJJ0H42ucTRL"
+      "spotify_id": "1jw992uwXhqJJ0H42ucTRL",
+      "difficulty": 3
     },
     {
       "id": "12233",
@@ -2457,7 +2551,8 @@
       "tmdb_popularity": 3.9538,
       "song": "Why Should I Worry?",
       "song_author": "Billy Joel",
-      "spotify_id": "0wGh31bYM4IuRdJ7xTvgKN"
+      "spotify_id": "0wGh31bYM4IuRdJ7xTvgKN",
+      "difficulty": 2
     },
     {
       "id": "1434",
@@ -2481,7 +2576,8 @@
       "tmdb_popularity": 152.7843,
       "song": "Family Guy Main Title - From \"Family Guy\"",
       "song_author": "Cast - Family Guy",
-      "spotify_id": "72jm8yTVBe8LKbvr3EU8gR"
+      "spotify_id": "72jm8yTVBe8LKbvr3EU8gR",
+      "difficulty": 1
     },
     {
       "id": "9479",
@@ -2506,7 +2602,8 @@
       "tmdb_popularity": 8.331,
       "song": "Esto es Halloween",
       "song_author": "The Citizens of Halloween",
-      "spotify_id": "3WmBj4BoEGakTBSzQcXWYS"
+      "spotify_id": "3WmBj4BoEGakTBSzQcXWYS",
+      "difficulty": 1
     },
     {
       "id": "10693",
@@ -2532,7 +2629,8 @@
       "tmdb_popularity": 7.0031,
       "song": "¡Volarás!, ¡Volarás!, ¡Volarás!",
       "song_author": "Oliver Wallace",
-      "spotify_id": "0QZ1s3FAU99ixlfOm3KRkW"
+      "spotify_id": "0QZ1s3FAU99ixlfOm3KRkW",
+      "difficulty": 2
     },
     {
       "id": "10895",
@@ -2557,7 +2655,8 @@
       "tmdb_popularity": 19.9447,
       "song": "La estrella azul",
       "song_author": "Chanel",
-      "spotify_id": "4bROs9tP0mirFT3vmQH8fY"
+      "spotify_id": "4bROs9tP0mirFT3vmQH8fY",
+      "difficulty": 2
     },
     {
       "id": "22",
@@ -2582,7 +2681,8 @@
       "tmdb_popularity": 25.6373,
       "song": "He's a Pirate",
       "song_author": "Klaus Badelt",
-      "spotify_id": "4AD2dterIUjNt1LFNI9Bvi"
+      "spotify_id": "4AD2dterIUjNt1LFNI9Bvi",
+      "difficulty": 2
     },
     {
       "id": "10530",
@@ -2608,7 +2708,8 @@
       "tmdb_popularity": 5.4715,
       "song": "Colores en el Viento",
       "song_author": "Gema Castaño",
-      "spotify_id": "4QXQe0QL1CZP632T1cJWif"
+      "spotify_id": "4QXQe0QL1CZP632T1cJWif",
+      "difficulty": 2
     },
     {
       "id": "60572",
@@ -2633,7 +2734,8 @@
       "tmdb_popularity": 81.1185,
       "song": "Pokémon Theme",
       "song_author": "Pokémon",
-      "spotify_id": "3mNH9BXFcNElEFbgKqmq1J"
+      "spotify_id": "3mNH9BXFcNElEFbgKqmq1J",
+      "difficulty": 2
     },
     {
       "id": "44896",
@@ -2660,7 +2762,8 @@
       "tmdb_popularity": 14.142,
       "song": "Rango Theme Song",
       "song_author": "Los Lobos",
-      "spotify_id": "1y47B5SzygeWH9uJU8oxU0"
+      "spotify_id": "1y47B5SzygeWH9uJU8oxU0",
+      "difficulty": 3
     },
     {
       "id": "2062",
@@ -2686,7 +2789,8 @@
       "tmdb_popularity": 19.0791,
       "song": "Le Festin",
       "song_author": "Camille, Michael Giacchino",
-      "spotify_id": "02JIdsrod3BYucThfUFDUX"
+      "spotify_id": "02JIdsrod3BYucThfUFDUX",
+      "difficulty": 2
     },
     {
       "id": "105",
@@ -2711,7 +2815,8 @@
       "tmdb_popularity": 17.0639,
       "song": "Back To The Future",
       "song_author": "The Outatime Orchestra",
-      "spotify_id": "5X7TqFJySUyxjUyKorkdXF"
+      "spotify_id": "5X7TqFJySUyxjUyKorkdXF",
+      "difficulty": 2
     },
     {
       "id": "60625",
@@ -2737,7 +2842,8 @@
       "tmdb_popularity": 155.5462,
       "song": "Rick and Morty Theme",
       "song_author": "Rick and Morty, Ryan Elder",
-      "spotify_id": "1Y6Pxm8LFw1zJBc3ZW3Stt"
+      "spotify_id": "1Y6Pxm8LFw1zJBc3ZW3Stt",
+      "difficulty": 2
     },
     {
       "id": "46195",
@@ -2763,7 +2869,8 @@
       "tmdb_popularity": 8.9621,
       "song": "Real In Rio",
       "song_author": "Jesse Eisenberg, Jamie Foxx, Anne Hathaway, George Lopez, will.i.am, The Rio Singers",
-      "spotify_id": "3qytQlsWcXeVQ2gR2mx8VI"
+      "spotify_id": "3qytQlsWcXeVQ2gR2mx8VI",
+      "difficulty": 3
     },
     {
       "id": "808",
@@ -2790,7 +2897,8 @@
       "tmdb_popularity": 36.9969,
       "song": "All Star",
       "song_author": "Smash Mouth",
-      "spotify_id": "2t0NfhRIiib6zlCw2XlHoq"
+      "spotify_id": "2t0NfhRIiib6zlCw2XlHoq",
+      "difficulty": 1
     },
     {
       "id": "508442",
@@ -2817,7 +2925,8 @@
       "tmdb_popularity": 13.3645,
       "song": "It's All Right",
       "song_author": "Jon Batiste",
-      "spotify_id": "4gzwK4RdSK9M43vPY68J2Y"
+      "spotify_id": "4gzwK4RdSK9M43vPY68J2Y",
+      "difficulty": 3
     },
     {
       "id": "2300",
@@ -2844,7 +2953,8 @@
       "tmdb_popularity": 5.4332,
       "song": "I Believe I Can Fly",
       "song_author": "R. Kelly",
-      "spotify_id": "3PCXLtid4Y3BGdCBW0pDEG"
+      "spotify_id": "3PCXLtid4Y3BGdCBW0pDEG",
+      "difficulty": 2
     },
     {
       "id": "1924",
@@ -2869,7 +2979,8 @@
       "tmdb_popularity": 8.1287,
       "song": "Theme from Superman - Concert Version",
       "song_author": "John Williams",
-      "spotify_id": "4tABZngfyleLXr5wxHgRxZ"
+      "spotify_id": "4tABZngfyleLXr5wxHgRxZ",
+      "difficulty": 2
     },
     {
       "id": "37135",
@@ -2894,7 +3005,8 @@
       "tmdb_popularity": 8.6262,
       "song": "En Mi Corazón Vivirás (Versión De Phil) - De \"Tarzan\"",
       "song_author": "Phil Collins",
-      "spotify_id": "7tgR5zkdJzZc5OgMBwhwwx"
+      "spotify_id": "7tgR5zkdJzZc5OgMBwhwwx",
+      "difficulty": 2
     },
     {
       "id": "10198",
@@ -2920,7 +3032,8 @@
       "tmdb_popularity": 11.3131,
       "song": "Ya llegaré",
       "song_author": "Chila Lynn",
-      "spotify_id": "7n5oagoStNwmIW0HLQGwb0"
+      "spotify_id": "7n5oagoStNwmIW0HLQGwb0",
+      "difficulty": 3
     },
     {
       "id": "578",
@@ -2945,7 +3058,8 @@
       "tmdb_popularity": 20.1869,
       "song": "Jaws Main Theme (From \"Jaws\")",
       "song_author": "Geek Music",
-      "spotify_id": "0C5o6yIrcFab0YS3GUYwp9"
+      "spotify_id": "0C5o6yIrcFab0YS3GUYwp9",
+      "difficulty": 1
     },
     {
       "id": "862",
@@ -2971,7 +3085,8 @@
       "tmdb_popularity": 135.5546,
       "song": "Hay Un Amigo En Mí",
       "song_author": "Tony Cruz",
-      "spotify_id": "5xo6EfJOJhQGHIHv2RBIpB"
+      "spotify_id": "5xo6EfJOJhQGHIHv2RBIpB",
+      "difficulty": 1
     },
     {
       "id": "136799",
@@ -2999,7 +3114,8 @@
       "tmdb_popularity": 5.5078,
       "song": "CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\")",
       "song_author": "Justin Timberlake",
-      "spotify_id": "1WkMMavIMc4JZ8cfMmxHkI"
+      "spotify_id": "1WkMMavIMc4JZ8cfMmxHkI",
+      "difficulty": 3
     },
     {
       "id": "418",
@@ -3026,7 +3142,8 @@
       "tmdb_popularity": 4.7512,
       "song": "Scooby-Doo (Scooby-Doo Theme Song)",
       "song_author": "Ohio Express",
-      "spotify_id": "1qZFiIbbctH69MjJzkP0hh"
+      "spotify_id": "1qZFiIbbctH69MjJzkP0hh",
+      "difficulty": 1
     },
     {
       "id": "14160",
@@ -3052,7 +3169,8 @@
       "tmdb_popularity": 15.5895,
       "song": "Married Life",
       "song_author": "Michael Giacchino",
-      "spotify_id": "7iocNjLrxPHLl8njgRlv5U"
+      "spotify_id": "7iocNjLrxPHLl8njgRlv5U",
+      "difficulty": 2
     },
     {
       "id": "277834",
@@ -3078,7 +3196,8 @@
       "tmdb_popularity": 3.5094,
       "song": "Qué hay más allá",
       "song_author": "María Parrado",
-      "spotify_id": "6orRFPOpyksp2Hgh7KDehQ"
+      "spotify_id": "6orRFPOpyksp2Hgh7KDehQ",
+      "difficulty": 1
     },
     {
       "id": "10681",
@@ -3103,7 +3222,8 @@
       "tmdb_popularity": 18.8473,
       "song": "La vie en rose - Remastered",
       "song_author": "Louis Armstrong",
-      "spotify_id": "57sKFCABC0VPxj4ZKkcEu7"
+      "spotify_id": "57sKFCABC0VPxj4ZKkcEu7",
+      "difficulty": 2
     },
     {
       "id": "269149",
@@ -3129,7 +3249,8 @@
       "tmdb_popularity": 19.4443,
       "song": "Try Everything",
       "song_author": "Shakira",
-      "spotify_id": "1N3dZ7TTWO6VcD4Y3hHYLZ"
+      "spotify_id": "1N3dZ7TTWO6VcD4Y3hHYLZ",
+      "difficulty": 3
     },
     {
       "id": "82690",
@@ -3155,7 +3276,8 @@
       "tmdb_popularity": 10.1364,
       "song": "When Can I See You Again? - From \"Wreck-It Ralph\"/Soundtrack Version",
       "song_author": "Owl City",
-      "spotify_id": "5ZkAx8zjLiSs1nMmBwJoZS"
+      "spotify_id": "5ZkAx8zjLiSs1nMmBwJoZS",
+      "difficulty": 3
     },
     {
       "id": "856",
@@ -3181,7 +3303,8 @@
       "tmdb_popularity": 6.3472,
       "song": "Why Don't You Do Right?",
       "song_author": "Amy Irving, Charles Fleischer",
-      "spotify_id": "3sGfVqsXBflIQEbRhyztWC"
+      "spotify_id": "3sGfVqsXBflIQEbRhyztWC",
+      "difficulty": 3
     }
   ]
 }
