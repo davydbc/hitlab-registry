@@ -32,6 +32,7 @@ import sys
 import threading
 import time
 import traceback
+import uuid
 from dataclasses import dataclass
 from datetime import date
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -73,8 +74,14 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-APP_DIR = Path(__file__).resolve().parent / "target" / "movies-catalog-manager"
-FILMS_FILE = APP_DIR / "movies.json"
+TOOLS_DIR = Path(__file__).resolve().parent
+REPO_DIR = TOOLS_DIR.parent
+CATEGORY_DIR = REPO_DIR / "category"
+TARGET_DIR = TOOLS_DIR / "target"
+DEFAULT_CATALOG_NAME = "movies.json"
+
+APP_DIR = TARGET_DIR / Path(DEFAULT_CATALOG_NAME).stem
+FILMS_FILE = CATEGORY_DIR / DEFAULT_CATALOG_NAME
 GENRES_FILE = APP_DIR / "genres.json"
 FILMS_CACHE_DIR = APP_DIR / "films_cache"
 POSTER_CACHE_DIR = APP_DIR / "poster_cache"
@@ -188,6 +195,67 @@ class AppError(Exception):
     """Error safe to show in the UI."""
 
 
+def catalog_label() -> str:
+    return FILMS_FILE.name
+
+
+def catalog_cache_dir(catalog_path: Path) -> Path:
+    return TARGET_DIR / catalog_path.stem
+
+
+def set_active_catalog(catalog_path: Path) -> None:
+    global APP_DIR, FILMS_FILE, GENRES_FILE, FILMS_CACHE_DIR, POSTER_CACHE_DIR, PENDING_SOUNDTRACK_RECOMMENDATIONS_FILE
+    FILMS_FILE = catalog_path
+    APP_DIR = catalog_cache_dir(catalog_path)
+    GENRES_FILE = APP_DIR / "genres.json"
+    FILMS_CACHE_DIR = APP_DIR / "films_cache"
+    POSTER_CACHE_DIR = APP_DIR / "poster_cache"
+    PENDING_SOUNDTRACK_RECOMMENDATIONS_FILE = APP_DIR / "pending_soundtrack_recommendations.md"
+    ensure_dirs()
+
+
+def catalog_files() -> list[Path]:
+    CATEGORY_DIR.mkdir(parents=True, exist_ok=True)
+    return sorted(CATEGORY_DIR.glob("*.json"), key=lambda path: path.name.lower())
+
+
+def default_catalog_path() -> Path:
+    preferred = CATEGORY_DIR / DEFAULT_CATALOG_NAME
+    if preferred.exists():
+        return preferred
+    files = catalog_files()
+    if files:
+        return files[0]
+    return preferred
+
+
+def sanitize_catalog_filename(raw_name: Any) -> str:
+    name = clean_edit_value(raw_name)
+    if name.lower().endswith(".json"):
+        name = name[:-5]
+    name = re.sub(r"[^A-Za-z0-9_-]+", "-", name).strip("-_")
+    if not name:
+        raise AppError("El nombre del catalogo no puede estar vacio.")
+    return f"{name}.json"
+
+
+def empty_catalog(name: str) -> dict[str, Any]:
+    display_name = Path(name).stem.replace("-", " ").replace("_", " ").title()
+    return {
+        "metadata": {
+            "identifier": str(uuid.uuid4()),
+            "version": "1.0.0",
+            "game-modes": ["turn-based", "competitive"],
+            "catalog-type": "movies",
+            "name": display_name,
+            "description": "",
+            "clues_supported": "true",
+        },
+        "genres": {},
+        "catalog": [],
+    }
+
+
 def response_wait_time(response: requests.Response) -> str:
     retry_after = clean_edit_value(response.headers.get("Retry-After"))
     rate_limit_reset = clean_edit_value(response.headers.get("X-RateLimit-Reset"))
@@ -253,6 +321,10 @@ def load_json(path: Path, default: Any) -> Any:
         return default
 
 
+def load_catalog_document() -> Any:
+    return load_json(FILMS_FILE, empty_catalog(FILMS_FILE.name))
+
+
 def atomic_write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp_path = path.with_name(f"{path.name}.tmp")
@@ -273,25 +345,46 @@ def sorted_films(films: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def load_films() -> list[dict[str, Any]]:
-    data = load_json(FILMS_FILE, [])
-    if not isinstance(data, list):
-        return []
-    return data
+    data = load_catalog_document()
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        catalog = data.get("catalog")
+        if isinstance(catalog, list):
+            return catalog
+    return []
 
 
 def save_films(films: list[dict[str, Any]]) -> None:
-    atomic_write_json(FILMS_FILE, sorted_films(films))
+    data = load_catalog_document()
+    sorted_data = sorted_films(films)
+    if isinstance(data, dict):
+        data["catalog"] = sorted_data
+        if "genres" not in data or not isinstance(data.get("genres"), dict):
+            data["genres"] = load_genres()
+        atomic_write_json(FILMS_FILE, data)
+        return
+    atomic_write_json(FILMS_FILE, sorted_data)
 
 
 def load_genres() -> dict[str, str]:
+    data = load_catalog_document()
+    if isinstance(data, dict) and isinstance(data.get("genres"), dict):
+        return {str(k): str(v) for k, v in data["genres"].items()}
     data = load_json(GENRES_FILE, {})
-    if not isinstance(data, dict):
-        return {}
-    return {str(k): str(v) for k, v in data.items()}
+    if isinstance(data, dict):
+        return {str(k): str(v) for k, v in data.items()}
+    return {}
 
 
 def save_genres(genres: dict[str, str]) -> None:
     ordered = dict(sorted(genres.items(), key=lambda item: int(item[0])))
+    data = load_catalog_document()
+    if isinstance(data, dict):
+        data["genres"] = ordered
+        if "catalog" not in data or not isinstance(data.get("catalog"), list):
+            data["catalog"] = []
+        atomic_write_json(FILMS_FILE, data)
     atomic_write_json(GENRES_FILE, ordered)
 
 
@@ -1272,7 +1365,7 @@ def update_missing_local_credits(
     if not missing:
         return False
     if progress:
-        progress(f"Actualizando créditos de movies.json: {len(missing)} pendientes")
+        progress(f"Actualizando creditos de {catalog_label()}: {len(missing)} pendientes")
     client = TMDBClient()
     changed = False
     total = len(missing)
@@ -1284,7 +1377,7 @@ def update_missing_local_credits(
                 changed = True
             continue
         if progress:
-            progress(f"Actualizando créditos de movies.json: {index}/{total}")
+            progress(f"Actualizando creditos de {catalog_label()}: {index}/{total}")
         credits = client.get(f"/{media_type_for_item(film)}/{movie_id}/credits", {"language": LANGUAGE})
         director, known_actor = credits_names(credits)
         film_changed = apply_credits_result(film, director, known_actor)
@@ -1376,7 +1469,7 @@ class SearchWorker(QThread):
                 self.finished_ok.emit(items, "TMDB")
             else:
                 items = local_search(self.params, self.progress.emit)
-                self.finished_ok.emit(items, "movies.json")
+                self.finished_ok.emit(items, catalog_label())
         except AppError as exc:
             self.failed.emit(str(exc))
         except Exception:
@@ -1507,7 +1600,7 @@ class RatingValueDialog(QDialog):
 class FilmsImporter(QWidget):
     def __init__(self) -> None:
         super().__init__()
-        ensure_dirs()
+        set_active_catalog(default_catalog_path())
         self.genres = load_genres()
         self.results: list[dict[str, Any]] = []
         self.display_results: list[dict[str, Any]] = []
@@ -1529,6 +1622,7 @@ class FilmsImporter(QWidget):
         self.resize(1450, 850)
         self.build_ui()
         self.ensure_initial_files()
+        self.populate_catalog_combo()
         self.update_genre_list()
         self.update_source_state()
         self.refresh_table()
@@ -1542,6 +1636,21 @@ class FilmsImporter(QWidget):
         self.status_label.setStyleSheet("font-weight: 600; padding: 6px;")
         root.addWidget(self.status_label)
 
+        catalog_box = QGroupBox("Catalogo")
+        catalog_layout = QHBoxLayout(catalog_box)
+        catalog_layout.setContentsMargins(8, 4, 8, 4)
+        self.catalog_combo = QComboBox()
+        self.catalog_combo.currentIndexChanged.connect(self.select_catalog)
+        self.new_catalog_button = QPushButton("Nuevo")
+        self.duplicate_catalog_button = QPushButton("Duplicar")
+        self.new_catalog_button.clicked.connect(self.create_catalog)
+        self.duplicate_catalog_button.clicked.connect(self.duplicate_catalog)
+        catalog_layout.addWidget(QLabel("Fichero"))
+        catalog_layout.addWidget(self.catalog_combo, 1)
+        catalog_layout.addWidget(self.new_catalog_button)
+        catalog_layout.addWidget(self.duplicate_catalog_button)
+        root.addWidget(catalog_box)
+
         filters = QGroupBox("Filtros")
         filters.setMaximumHeight(190)
         filters_layout = QVBoxLayout(filters)
@@ -1549,7 +1658,7 @@ class FilmsImporter(QWidget):
         filters_layout.setSpacing(6)
 
         self.tmdb_radio = QRadioButton("TMDB")
-        self.local_radio = QRadioButton("movies.json")
+        self.local_radio = QRadioButton(catalog_label())
         self.tmdb_radio.setChecked(True)
         self.source_group = QButtonGroup(self)
         self.source_group.addButton(self.tmdb_radio)
@@ -1751,9 +1860,119 @@ class FilmsImporter(QWidget):
         paging.addStretch()
         root.addLayout(paging)
 
+    def populate_catalog_combo(self) -> None:
+        self.catalog_combo.blockSignals(True)
+        try:
+            self.catalog_combo.clear()
+            files = catalog_files()
+            if FILMS_FILE not in files and FILMS_FILE.exists():
+                files.append(FILMS_FILE)
+                files.sort(key=lambda path: path.name.lower())
+            for path in files:
+                self.catalog_combo.addItem(path.name, str(path))
+            index = self.catalog_combo.findData(str(FILMS_FILE))
+            if index >= 0:
+                self.catalog_combo.setCurrentIndex(index)
+        finally:
+            self.catalog_combo.blockSignals(False)
+        self.local_radio.setText(catalog_label())
+
+    def confirm_discard_pending_changes(self) -> bool:
+        if not self.dirty_song_ids and not self.dirty_rating_ids:
+            return True
+        answer = QMessageBox.question(
+            self,
+            "Cambios pendientes",
+            "Hay cambios sin guardar en la pagina actual. Desea descartarlos?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+            QMessageBox.StandardButton.No,
+        )
+        return answer == QMessageBox.StandardButton.Yes
+
+    def reload_active_catalog(self, operation: str) -> None:
+        self.genres = load_genres()
+        self.pending_soundtrack_recommendations = parse_pending_soundtrack_recommendations()
+        self.results.clear()
+        self.display_results.clear()
+        self.selected_ids.clear()
+        self.dirty_song_ids.clear()
+        self.dirty_rating_ids.clear()
+        self.current_page = 0
+        self.sort_column = None
+        self.sort_direction = 0
+        self.table.horizontalHeader().setSortIndicatorShown(False)
+        self.local_radio.setText(catalog_label())
+        if self.local_radio.isChecked():
+            self.current_source_label = catalog_label()
+        self.last_operation = operation
+        self.update_genre_list()
+        self.update_source_state()
+        self.refresh_table()
+        self.update_status()
+
+    def select_catalog(self, index: int) -> None:
+        if index < 0:
+            return
+        path_text = self.catalog_combo.itemData(index)
+        if not path_text:
+            return
+        next_path = Path(str(path_text))
+        if next_path == FILMS_FILE:
+            return
+        if not self.confirm_discard_pending_changes():
+            self.populate_catalog_combo()
+            return
+        set_active_catalog(next_path)
+        self.reload_active_catalog(f"Catalogo seleccionado: {catalog_label()}")
+
+    def prompt_catalog_name(self, title: str, label: str, default: str = "") -> Path | None:
+        name, accepted = QInputDialog.getText(self, title, label, text=default)
+        if not accepted:
+            return None
+        try:
+            filename = sanitize_catalog_filename(name)
+        except AppError as exc:
+            self.show_error(str(exc))
+            return None
+        path = CATEGORY_DIR / filename
+        if path.exists():
+            self.show_error(f"Ya existe {filename}.")
+            return None
+        return path
+
+    def create_catalog(self) -> None:
+        if not self.confirm_discard_pending_changes():
+            return
+        path = self.prompt_catalog_name("Nuevo catalogo", "Nombre del nuevo catalogo")
+        if path is None:
+            return
+        atomic_write_json(path, empty_catalog(path.name))
+        set_active_catalog(path)
+        self.populate_catalog_combo()
+        self.reload_active_catalog(f"Catalogo creado: {catalog_label()}")
+
+    def duplicate_catalog(self) -> None:
+        if not self.confirm_discard_pending_changes():
+            return
+        default_name = f"{FILMS_FILE.stem}-copy"
+        path = self.prompt_catalog_name("Duplicar catalogo", "Nombre del duplicado", default_name)
+        if path is None:
+            return
+        data = load_catalog_document()
+        if isinstance(data, dict):
+            data = json.loads(json.dumps(data))
+            metadata = data.get("metadata")
+            if isinstance(metadata, dict):
+                metadata["identifier"] = str(uuid.uuid4())
+                metadata["name"] = Path(path.name).stem.replace("-", " ").replace("_", " ").title()
+        atomic_write_json(path, data)
+        set_active_catalog(path)
+        self.populate_catalog_combo()
+        self.reload_active_catalog(f"Catalogo duplicado: {catalog_label()}")
+
     def ensure_initial_files(self) -> None:
         if not FILMS_FILE.exists():
-            save_films([])
+            atomic_write_json(FILMS_FILE, empty_catalog(FILMS_FILE.name))
         if not self.genres:
             try:
                 self.genres = fetch_genres_from_tmdb()
@@ -1824,12 +2043,15 @@ class FilmsImporter(QWidget):
         self.limit_combo.setEnabled(is_tmdb)
         self.difficulty_filter_combo.setEnabled(not is_tmdb)
         self.relevance_filter_combo.setEnabled(not is_tmdb)
-        self.current_source_label = "TMDB" if is_tmdb else "movies.json"
+        self.current_source_label = "TMDB" if is_tmdb else catalog_label()
         self.update_action_visibility()
         self.update_status()
 
+    def is_local_source(self) -> bool:
+        return self.current_source_label != "TMDB"
+
     def update_action_visibility(self) -> None:
-        is_tmdb_listing = self.current_source_label == "TMDB"
+        is_tmdb_listing = not self.is_local_source()
         self.add_button.setVisible(is_tmdb_listing)
         self.remove_button.setVisible(not is_tmdb_listing)
         self.save_changes_button.setVisible(not is_tmdb_listing)
@@ -1989,7 +2211,7 @@ class FilmsImporter(QWidget):
                         COL_POPULARITY,
                 ):
                     item.setTextAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
-                if self.current_source_label == "movies.json" and index in EDITABLE_MUSIC_COLUMNS:
+                if self.is_local_source() and index in EDITABLE_MUSIC_COLUMNS:
                     item.setFlags(item.flags() | Qt.ItemFlag.ItemIsEditable)
                 else:
                     item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
@@ -2085,8 +2307,8 @@ class FilmsImporter(QWidget):
         index = self.table.indexAt(pos)
         if not index.isValid() or index.column() != COL_SPOTIFY_ID:
             return
-        if self.current_source_label != "movies.json":
-            self.show_error("La seleccion de banda sonora esta disponible en la vista movies.json.")
+        if not self.is_local_source():
+            self.show_error(f"La seleccion de banda sonora esta disponible en la vista {catalog_label()}.")
             return
 
         row = index.row()
@@ -2150,7 +2372,7 @@ class FilmsImporter(QWidget):
         self.update_status()
 
     def populate_spotify_info_for_current_page(self) -> None:
-        if self.current_source_label != "movies.json":
+        if not self.is_local_source():
             return
         dirty_ids = self.current_page_dirty_ids()
         candidates = [
@@ -2194,7 +2416,7 @@ class FilmsImporter(QWidget):
         try:
             save_films(films)
         except Exception:
-            self.show_error("No se pudo escribir movies.json.")
+            self.show_error(f"No se pudo escribir {catalog_label()}.")
             return
         self.apply_spotify_updates_to_current_results(by_id, updated_ids)
         self.last_operation = f"{len(updated_ids)} canciones actualizadas desde Spotify"
@@ -2338,7 +2560,7 @@ class FilmsImporter(QWidget):
             self.create_spotify_playlist_button.setEnabled(bool(self.selected_spotify_ids()))
 
     def update_change_buttons(self) -> None:
-        enabled = self.current_source_label == "movies.json" and bool(self.current_page_dirty_ids())
+        enabled = self.is_local_source() and bool(self.current_page_dirty_ids())
         if hasattr(self, "save_changes_button"):
             self.save_changes_button.setEnabled(enabled)
         if hasattr(self, "discard_changes_button"):
@@ -2369,7 +2591,7 @@ class FilmsImporter(QWidget):
         try:
             save_films(films)
         except Exception:
-            self.show_error("No se pudo escribir movies.json.")
+            self.show_error(f"No se pudo escribir {catalog_label()}.")
             return
         self.dirty_song_ids.difference_update(dirty_ids)
         self.dirty_rating_ids.difference_update(dirty_ids)
@@ -2439,7 +2661,7 @@ class FilmsImporter(QWidget):
                 self.selected_ids.add(film_id)
             else:
                 self.selected_ids.discard(film_id)
-        elif column in EDITABLE_MUSIC_COLUMNS and self.current_source_label == "movies.json":
+        elif column in EDITABLE_MUSIC_COLUMNS and self.is_local_source():
             fields = {
                 COL_SONG: "song",
                 COL_SONG_AUTHOR: "song_author",
@@ -2470,7 +2692,7 @@ class FilmsImporter(QWidget):
     def handle_cell_clicked(self, row: int, column: int) -> None:
         if column not in EDITABLE_RATING_COLUMNS:
             return
-        if self.current_source_label != "movies.json":
+        if not self.is_local_source():
             return
         item = self.table.item(row, column)
         if item is None:
@@ -2682,7 +2904,7 @@ class FilmsImporter(QWidget):
         except AppError as exc:
             self.show_error(str(exc))
         except Exception:
-            self.show_error("No se pudo escribir movies.json.")
+            self.show_error(f"No se pudo escribir {catalog_label()}.")
 
     def remove_selected(self) -> None:
         selected = self.selected_result_films()
@@ -2712,7 +2934,7 @@ class FilmsImporter(QWidget):
             self.refresh_table()
             self.update_status()
         except Exception:
-            self.show_error("No se pudo escribir movies.json.")
+            self.show_error(f"No se pudo escribir {catalog_label()}.")
 
     def refresh_genres(self) -> None:
         try:
@@ -2747,7 +2969,7 @@ class FilmsImporter(QWidget):
         pages = self.page_count()
         current = self.current_page + 1 if pages else 0
         self.status_label.setText(
-            f"movies.json: {films_count} películas  |  "
+            f"{catalog_label()}: {films_count} peliculas  |  "
             f"Fuente: {self.current_source_label}  |  "
             f"Página: {current} / {pages}  |  "
             f"Resultados: {len(self.display_results)}  |  "
