@@ -49,6 +49,7 @@ from PyQt6.QtWidgets import (
     QApplication,
     QAbstractItemView,
     QButtonGroup,
+    QCheckBox,
     QComboBox,
     QDialog,
     QDialogButtonBox,
@@ -96,6 +97,17 @@ SORTS = [
     "vote_average.desc",
     "revenue.desc",
 ]
+MEDIA_TYPE_MOVIE = "movie"
+MEDIA_TYPE_TV = "tv"
+MEDIA_TYPES = (MEDIA_TYPE_MOVIE, MEDIA_TYPE_TV)
+MEDIA_TYPE_LABELS = {
+    MEDIA_TYPE_MOVIE: "Películas",
+    MEDIA_TYPE_TV: "Series",
+}
+MEDIA_TYPE_VALUES = {
+    MEDIA_TYPE_MOVIE: 1,
+    MEDIA_TYPE_TV: 2,
+}
 
 LIMIT_OPTIONS = [100, 250, 500, 1000, 2000, 5000]
 ROWS_PER_PAGE = 50
@@ -122,6 +134,7 @@ RATING_WEIGHT = 1.0
 VOTES_WEIGHT = 1.0
 POPULARITY_WEIGHT = 1.5
 CREDITS_SELECTION_VERSION = 2
+UNKNOWN_CREDIT_VALUE = "<unknown>"
 
 COLUMNS = [
     "Select",
@@ -217,6 +230,7 @@ class SearchParams:
     year_to: int
     genres: tuple[int, ...]
     limit: int
+    media_types: tuple[str, ...] = MEDIA_TYPES
     title_filter: str = ""
     difficulty: int = 0
     relevance: int = 0
@@ -326,6 +340,54 @@ def normalize_movie(item: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def normalize_tv_show(item: dict[str, Any]) -> dict[str, Any]:
+    raw_date = item.get("first_air_date") or None
+    poster_path = item.get("poster_path")
+    title = item.get("name") or item.get("original_name") or ""
+    original_title = item.get("original_name") or title
+    return {
+        "id": str(item.get("id")),
+        "tmdb_type": MEDIA_TYPE_TV,
+        "type": MEDIA_TYPE_VALUES[MEDIA_TYPE_TV],
+        "poster": f"{POSTER_BASE_URL}{poster_path}" if poster_path else None,
+        "title": title,
+        "original_title": original_title,
+        "year": year_from_date(raw_date),
+        "date": raw_date,
+        "genres": [int(g) for g in item.get("genre_ids", [])],
+        "score": round(score_item(item), 4),
+        "tmdb_vote_average": item.get("vote_average") or 0,
+        "tmdb_vote_count": item.get("vote_count") or 0,
+        "tmdb_popularity": item.get("popularity") or 0,
+        "director": clean_edit_value(item.get("director")),
+        "known_actor": clean_edit_value(item.get("known_actor")),
+        "credits_selection_version": int(item.get("credits_selection_version") or 0),
+    }
+
+
+def media_type_for_item(item: dict[str, Any]) -> str:
+    tmdb_type = clean_edit_value(item.get("tmdb_type")).casefold()
+    if tmdb_type in MEDIA_TYPES:
+        return tmdb_type
+    try:
+        type_value = int(item.get("type") or 0)
+    except (TypeError, ValueError):
+        type_value = 0
+    if type_value == MEDIA_TYPE_VALUES[MEDIA_TYPE_TV]:
+        return MEDIA_TYPE_TV
+    return MEDIA_TYPE_MOVIE
+
+
+def item_key(item: dict[str, Any]) -> str:
+    return f"{media_type_for_item(item)}:{item.get('id')}"
+
+
+def normalize_tmdb_item(item: dict[str, Any], media_type: str) -> dict[str, Any]:
+    if media_type == MEDIA_TYPE_TV:
+        return normalize_tv_show(item)
+    return normalize_movie(item)
+
+
 def cast_popularity(person: dict[str, Any]) -> float:
     try:
         return float(person.get("popularity") or 0)
@@ -408,6 +470,26 @@ def needs_credits_update(film: dict[str, Any]) -> bool:
             or not has_defined_text(film.get("known_actor"))
             or credits_selection_version(film.get("credits_selection_version")) < CREDITS_SELECTION_VERSION
     )
+
+
+def apply_credits_result(film: dict[str, Any], director: str, known_actor: str) -> bool:
+    changed = False
+    next_director = director or UNKNOWN_CREDIT_VALUE
+    next_known_actor = known_actor or UNKNOWN_CREDIT_VALUE
+    if film.get("director") != next_director and (
+            director or not has_defined_text(film.get("director"))
+    ):
+        film["director"] = next_director
+        changed = True
+    if film.get("known_actor") != next_known_actor and (
+            known_actor or not has_defined_text(film.get("known_actor"))
+    ):
+        film["known_actor"] = next_known_actor
+        changed = True
+    if credits_selection_version(film.get("credits_selection_version")) != CREDITS_SELECTION_VERSION:
+        film["credits_selection_version"] = CREDITS_SELECTION_VERSION
+        changed = True
+    return changed
 
 
 def valid_spotify_id(value: Any) -> bool:
@@ -841,12 +923,13 @@ def title_matches(film: dict[str, Any], query: str) -> bool:
 
 def effective_cache_payload(params: SearchParams) -> dict[str, Any]:
     return {
-        "cache_version": 6,
+        "cache_version": 7,
         "source": params.source,
         "year_from": params.year_from,
         "year_to": params.year_to,
         "genres": sorted(active_genre_filter(params)),
         "limit": params.limit,
+        "media_types": list(params.media_types),
         "title_filter": normalize_search_text(params.title_filter),
         "language": params.language,
         "region": params.region,
@@ -867,6 +950,8 @@ def cache_matches_title_filter(cached: list[dict[str, Any]], params: SearchParam
 
 
 def legacy_cache_keys(params: SearchParams) -> list[str]:
+    if tuple(params.media_types) != (MEDIA_TYPE_MOVIE,):
+        return []
     legacy_payloads = [
         {
             "cache_version": 5,
@@ -946,7 +1031,7 @@ def active_genre_filter(params: SearchParams) -> set[int]:
 
 
 def matches_year_and_genres(item: dict[str, Any], params: SearchParams) -> bool:
-    raw_date = item.get("release_date") or item.get("date")
+    raw_date = item.get("release_date") or item.get("first_air_date") or item.get("date")
     year = year_from_date(raw_date) or item.get("year")
     try:
         year_int = int(year)
@@ -1027,19 +1112,14 @@ def enrich_movies_with_credits(
     for index, movie in enumerate(missing, start=1):
         movie_id = clean_edit_value(movie.get("id"))
         if not movie_id:
+            if apply_credits_result(movie, "", ""):
+                changed = True
             continue
         if progress and (index == 1 or index % 25 == 0 or index == total):
             progress(f"Consultando créditos TMDB: {index}/{total}")
-        credits = client.get(f"/movie/{movie_id}/credits", {"language": LANGUAGE})
+        credits = client.get(f"/{media_type_for_item(movie)}/{movie_id}/credits", {"language": LANGUAGE})
         director, known_actor = credits_names(credits)
-        if director and movie.get("director") != director:
-            movie["director"] = director
-            changed = True
-        if known_actor and movie.get("known_actor") != known_actor:
-            movie["known_actor"] = known_actor
-            changed = True
-        if credits_selection_version(movie.get("credits_selection_version")) != CREDITS_SELECTION_VERSION:
-            movie["credits_selection_version"] = CREDITS_SELECTION_VERSION
+        if apply_credits_result(movie, director, known_actor):
             changed = True
     return changed
 
@@ -1096,76 +1176,87 @@ def discover_movies(
 
     if title_query:
         if progress:
-            progress(f"Buscando título en TMDB: {title_query}")
-        for page in range(1, min(max_pages * 4, 500) + 1):
-            data = client.get(
-                "/search/movie",
-                {
+            progress(f"Buscando titulo en TMDB: {title_query}")
+        for media_type in params.media_types:
+            for page in range(1, min(max_pages * 4, 500) + 1):
+                data = client.get(
+                    f"/search/{media_type}",
+                    {
+                        "language": params.language,
+                        "region": params.region,
+                        "include_adult": str(INCLUDE_ADULT).lower(),
+                        "query": title_query,
+                        "page": page,
+                    },
+                )
+                for item in data.get("results", []):
+                    if not matches_year_and_genres(item, params):
+                        continue
+                    normalized_item = normalize_tmdb_item(item, media_type)
+                    if not title_matches(normalized_item, title_query):
+                        continue
+                    key = item_key(normalized_item)
+                    old = candidates.get(key)
+                    if old is None or score_item(item) > score_item(old):
+                        candidates[key] = dict(item, _media_type=media_type)
+
+                total_pages = min(int(data.get("total_pages") or 1), 500)
+                if page >= total_pages or len(candidates) >= params.limit:
+                    break
+
+        ranked = sorted(candidates.values(), key=score_item, reverse=True)
+        normalized = [
+            normalize_tmdb_item(item, clean_edit_value(item.get("_media_type")) or MEDIA_TYPE_MOVIE)
+            for item in ranked[: params.limit]
+        ]
+        atomic_write_json(cache_path, normalized)
+        if progress:
+            progress(f"Busqueda guardada en cache: {len(normalized)} resultados")
+        return normalized
+
+    for media_type in params.media_types:
+        sorts = params.sorts
+        if media_type == MEDIA_TYPE_TV:
+            sorts = tuple(sort_by for sort_by in params.sorts if sort_by != "revenue.desc")
+        for sort_by in sorts:
+            if progress:
+                progress(f"Consultando TMDB {MEDIA_TYPE_LABELS.get(media_type, media_type)}: {sort_by}")
+            for page in range(1, min(max_pages, 500) + 1):
+                date_prefix = "first_air_date" if media_type == MEDIA_TYPE_TV else "primary_release_date"
+                query = {
                     "language": params.language,
                     "region": params.region,
                     "include_adult": str(INCLUDE_ADULT).lower(),
-                    "query": title_query,
+                    f"{date_prefix}.gte": f"{params.year_from}-01-01",
+                    f"{date_prefix}.lte": f"{params.year_to}-12-31",
+                    "sort_by": sort_by,
                     "page": page,
-                },
-            )
-            for item in data.get("results", []):
-                if not matches_year_and_genres(item, params):
-                    continue
-                if not title_matches(normalize_movie(item), title_query):
-                    continue
-                movie_id = str(item.get("id"))
-                old = candidates.get(movie_id)
-                if old is None or score_item(item) > score_item(old):
-                    candidates[movie_id] = item
+                }
+                if with_genres:
+                    query["with_genres"] = with_genres
+                data = client.get(f"/discover/{media_type}", query)
+                for item in data.get("results", []):
+                    normalized_item = normalize_tmdb_item(item, media_type)
+                    key = item_key(normalized_item)
+                    old = candidates.get(key)
+                    if old is None or score_item(item) > score_item(old):
+                        candidates[key] = dict(item, _media_type=media_type)
 
-            total_pages = min(int(data.get("total_pages") or 1), 500)
-            if page >= total_pages or len(candidates) >= params.limit:
-                break
-
-        ranked = sorted(candidates.values(), key=score_item, reverse=True)
-        normalized = [normalize_movie(item) for item in ranked[: params.limit]]
-        atomic_write_json(cache_path, normalized)
-        if progress:
-            progress(f"Búsqueda guardada en caché: {len(normalized)} resultados")
-        return normalized
-
-    for sort_by in params.sorts:
-        if progress:
-            progress(f"Consultando TMDB: {sort_by}")
-        for page in range(1, min(max_pages, 500) + 1):
-            query = {
-                "language": params.language,
-                "region": params.region,
-                "include_adult": str(INCLUDE_ADULT).lower(),
-                "primary_release_date.gte": f"{params.year_from}-01-01",
-                "primary_release_date.lte": f"{params.year_to}-12-31",
-                "sort_by": sort_by,
-                "page": page,
-            }
-            if with_genres:
-                query["with_genres"] = with_genres
-            data = client.get("/discover/movie", query)
-            for item in data.get("results", []):
-                movie_id = str(item.get("id"))
-                old = candidates.get(movie_id)
-                if old is None or score_item(item) > score_item(old):
-                    candidates[movie_id] = item
-
-            total_pages = min(int(data.get("total_pages") or 1), 500)
-            if page >= total_pages or len(candidates) >= params.limit * 2:
-                break
+                total_pages = min(int(data.get("total_pages") or 1), 500)
+                if page >= total_pages or len(candidates) >= params.limit * 2:
+                    break
 
     ranked = sorted(candidates.values(), key=score_item, reverse=True)
     normalized: list[dict[str, Any]] = []
     for item in ranked:
-        movie = normalize_movie(item)
+        movie = normalize_tmdb_item(item, clean_edit_value(item.get("_media_type")) or MEDIA_TYPE_MOVIE)
         if title_matches(movie, params.title_filter):
             normalized.append(movie)
         if len(normalized) >= params.limit:
             break
     atomic_write_json(cache_path, normalized)
     if progress:
-        progress(f"Búsqueda guardada en caché: {len(normalized)} resultados")
+        progress(f"Busqueda guardada en cache: {len(normalized)} resultados")
     return normalized
 
 
@@ -1188,21 +1279,15 @@ def update_missing_local_credits(
     for index, film in enumerate(missing, start=1):
         movie_id = clean_edit_value(film.get("id"))
         if not movie_id:
+            if apply_credits_result(film, "", ""):
+                save_films(films)
+                changed = True
             continue
         if progress:
             progress(f"Actualizando créditos de films.json: {index}/{total}")
-        credits = client.get(f"/movie/{movie_id}/credits", {"language": LANGUAGE})
+        credits = client.get(f"/{media_type_for_item(film)}/{movie_id}/credits", {"language": LANGUAGE})
         director, known_actor = credits_names(credits)
-        film_changed = False
-        if director and film.get("director") != director:
-            film["director"] = director
-            film_changed = True
-        if known_actor and film.get("known_actor") != known_actor:
-            film["known_actor"] = known_actor
-            film_changed = True
-        if credits_selection_version(film.get("credits_selection_version")) != CREDITS_SELECTION_VERSION:
-            film["credits_selection_version"] = CREDITS_SELECTION_VERSION
-            film_changed = True
+        film_changed = apply_credits_result(film, director, known_actor)
         if film_changed:
             save_films(films)
             changed = True
@@ -1218,6 +1303,8 @@ def local_search(
     films = load_films()
     update_missing_local_credits(films, progress)
     for film in films:
+        if media_type_for_item(film) not in params.media_types:
+            continue
         year = film.get("year")
         try:
             year_int = int(year)
@@ -1239,6 +1326,8 @@ def local_search(
 
 
 def poster_cache_path(film: dict[str, Any]) -> Path:
+    if media_type_for_item(film) == MEDIA_TYPE_TV:
+        return POSTER_CACHE_DIR / f"tv_{film.get('id')}.jpg"
     return POSTER_CACHE_DIR / f"{film.get('id')}.jpg"
 
 
@@ -1310,7 +1399,7 @@ class PosterWorker(QThread):
             except Exception:
                 path = None
             if path:
-                self.poster_ready.emit(str(film.get("id")), str(path))
+                self.poster_ready.emit(item_key(film), str(path))
 
 
 class FilmsTableWidget(QTableWidget):
@@ -1476,6 +1565,18 @@ class FilmsImporter(QWidget):
         source_layout.addWidget(self.tmdb_radio)
         source_layout.addWidget(self.local_radio)
         top_filters.addWidget(source_box, 0)
+
+        self.movie_type_checkbox = QCheckBox("Películas")
+        self.series_type_checkbox = QCheckBox("Series")
+        self.movie_type_checkbox.setChecked(True)
+        self.series_type_checkbox.setChecked(True)
+
+        media_type_box = QGroupBox("Tipos")
+        media_type_layout = QHBoxLayout(media_type_box)
+        media_type_layout.setContentsMargins(8, 4, 8, 4)
+        media_type_layout.addWidget(self.movie_type_checkbox)
+        media_type_layout.addWidget(self.series_type_checkbox)
+        top_filters.addWidget(media_type_box, 0)
 
         self.year_preset_combo = QComboBox()
         self.populate_year_presets()
@@ -1738,6 +1839,8 @@ class FilmsImporter(QWidget):
 
     def reset_filters(self) -> None:
         self.tmdb_radio.setChecked(True)
+        self.movie_type_checkbox.setChecked(True)
+        self.series_type_checkbox.setChecked(True)
         self.year_preset_combo.setCurrentIndex(0)
         self.apply_year_preset()
         self.title_filter_edit.clear()
@@ -1752,6 +1855,14 @@ class FilmsImporter(QWidget):
         if self.year_from.value() > self.year_to.value():
             self.show_error("El año Desde debe ser menor o igual que Hasta.")
             return None
+        media_types: list[str] = []
+        if self.movie_type_checkbox.isChecked():
+            media_types.append(MEDIA_TYPE_MOVIE)
+        if self.series_type_checkbox.isChecked():
+            media_types.append(MEDIA_TYPE_TV)
+        if not media_types:
+            self.show_error("Selecciona al menos un tipo: películas, series o ambos.")
+            return None
         source = "tmdb" if self.tmdb_radio.isChecked() else "local"
         return SearchParams(
             source=source,
@@ -1759,6 +1870,7 @@ class FilmsImporter(QWidget):
             year_to=self.year_to.value(),
             genres=self.selected_genres(),
             limit=int(self.limit_combo.currentData()),
+            media_types=tuple(media_types),
             title_filter=self.title_filter_edit.text().strip(),
             difficulty=int(self.difficulty_filter_combo.currentData() or 0),
             relevance=int(self.relevance_filter_combo.currentData() or 0),
@@ -1817,7 +1929,7 @@ class FilmsImporter(QWidget):
         return self.display_results[start:end]
 
     def imported_ids(self) -> set[str]:
-        return {str(item.get("id")) for item in load_films()}
+        return {item_key(item) for item in load_films()}
 
     def refresh_table(self) -> None:
         self.table.blockSignals(True)
@@ -1828,15 +1940,16 @@ class FilmsImporter(QWidget):
 
         for row, film in enumerate(page_items):
             film_id = str(film.get("id"))
-            is_imported_tmdb_result = self.current_source_label == "TMDB" and film_id in imported
+            film_key = item_key(film)
+            is_imported_tmdb_result = self.current_source_label == "TMDB" and film_key in imported
             imported_brush = QBrush(QColor("#e6f4ea"))
             dirty_brush = QBrush(QColor("#fff4ce"))
             checkbox_item = QTableWidgetItem()
             checkbox_item.setFlags(Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsUserCheckable)
             checkbox_item.setCheckState(
-                Qt.CheckState.Checked if film_id in self.selected_ids else Qt.CheckState.Unchecked
+                Qt.CheckState.Checked if film_key in self.selected_ids else Qt.CheckState.Unchecked
             )
-            checkbox_item.setData(Qt.ItemDataRole.UserRole, film_id)
+            checkbox_item.setData(Qt.ItemDataRole.UserRole, film_key)
             if is_imported_tmdb_result:
                 checkbox_item.setBackground(imported_brush)
             self.table.setItem(row, COL_SELECT, checkbox_item)
@@ -1860,11 +1973,11 @@ class FilmsImporter(QWidget):
                 display_float(film.get("tmdb_vote_average")),
                 str(film.get("tmdb_vote_count") or 0),
                 display_float(film.get("tmdb_popularity")),
-                "Sí" if film_id in imported else "No",
+                "Sí" if film_key in imported else "No",
             ]
             for index, value in enumerate(values, start=1):
                 item = QTableWidgetItem(str(value))
-                item.setData(Qt.ItemDataRole.UserRole, film_id)
+                item.setData(Qt.ItemDataRole.UserRole, film_key)
                 if index in (
                         COL_RANK,
                         COL_YEAR,
@@ -1882,9 +1995,9 @@ class FilmsImporter(QWidget):
                     item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
                 if is_imported_tmdb_result:
                     item.setBackground(imported_brush)
-                if film_id in self.dirty_song_ids and index in EDITABLE_MUSIC_COLUMNS:
+                if film_key in self.dirty_song_ids and index in EDITABLE_MUSIC_COLUMNS:
                     item.setBackground(dirty_brush)
-                if film_id in self.dirty_rating_ids and index in EDITABLE_RATING_COLUMNS:
+                if film_key in self.dirty_rating_ids and index in EDITABLE_RATING_COLUMNS:
                     item.setBackground(dirty_brush)
                 self.table.setItem(row, index, item)
             self.load_spotify_cell(row, film)
@@ -1902,7 +2015,7 @@ class FilmsImporter(QWidget):
         label = QLabel("Sin póster")
         label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         label.setMinimumSize(*POSTER_CELL_SIZE)
-        label.setProperty("film_id", str(film.get("id")))
+        label.setProperty("film_id", item_key(film))
         if shaded:
             label.setStyleSheet("background-color: #e6f4ea;")
         path = poster_cache_path(film)
@@ -1935,10 +2048,10 @@ class FilmsImporter(QWidget):
 
     def film_for_id(self, film_id: str) -> dict[str, Any] | None:
         for film in self.display_results:
-            if str(film.get("id")) == film_id:
+            if item_key(film) == film_id:
                 return film
         for film in self.results:
-            if str(film.get("id")) == film_id:
+            if item_key(film) == film_id:
                 return film
         return None
 
@@ -2043,7 +2156,7 @@ class FilmsImporter(QWidget):
         candidates = [
             film
             for film in self.page_items()
-            if str(film.get("id")) not in dirty_ids
+            if item_key(film) not in dirty_ids
                and valid_spotify_id(sanitize_spotify_track_id(film.get("spotify_id")))
                and not has_complete_song_info(film)
         ]
@@ -2051,10 +2164,10 @@ class FilmsImporter(QWidget):
             return
 
         films = load_films()
-        by_id = {str(film.get("id")): film for film in films}
+        by_id = {item_key(film): film for film in films}
         updated_ids: set[str] = set()
         for film in candidates:
-            film_id = str(film.get("id"))
+            film_id = item_key(film)
             persisted = by_id.get(film_id)
             if persisted is None or has_complete_song_info(persisted):
                 continue
@@ -2094,7 +2207,7 @@ class FilmsImporter(QWidget):
     ) -> None:
         for collection in (self.results, self.display_results):
             for film in collection:
-                film_id = str(film.get("id"))
+                film_id = item_key(film)
                 persisted = films_by_id.get(film_id)
                 if film_id not in updated_ids or persisted is None:
                     continue
@@ -2145,14 +2258,14 @@ class FilmsImporter(QWidget):
     def update_music_field_for_film(self, film_id: str, field: str, value: str) -> None:
         for collection in (self.results, self.display_results):
             for film in collection:
-                if str(film.get("id")) == film_id:
+                if item_key(film) == film_id:
                     film[field] = value
                     break
 
     def update_rating_field_for_film(self, film_id: str, field: str, value: int) -> None:
         for collection in (self.results, self.display_results):
             for film in collection:
-                if str(film.get("id")) == film_id:
+                if item_key(film) == film_id:
                     film[field] = value
                     break
 
@@ -2209,7 +2322,7 @@ class FilmsImporter(QWidget):
         self.last_operation = f"Spotify actualizado: {song_author} - {song}"
 
     def current_page_dirty_ids(self) -> set[str]:
-        page_ids = {str(film.get("id")) for film in self.page_items()}
+        page_ids = {item_key(film) for film in self.page_items()}
         return page_ids.intersection(self.dirty_song_ids.union(self.dirty_rating_ids))
 
     def selected_spotify_ids(self) -> list[str]:
@@ -2235,11 +2348,11 @@ class FilmsImporter(QWidget):
         dirty_ids = self.current_page_dirty_ids()
         if not dirty_ids:
             return
-        by_result_id = {str(item.get("id")): item for item in self.results}
+        by_result_id = {item_key(item): item for item in self.results}
         films = load_films()
         saved = 0
         for film in films:
-            film_id = str(film.get("id"))
+            film_id = item_key(film)
             updated = by_result_id.get(film_id)
             if film_id not in dirty_ids or updated is None:
                 continue
@@ -2268,10 +2381,10 @@ class FilmsImporter(QWidget):
         dirty_ids = self.current_page_dirty_ids()
         if not dirty_ids:
             return
-        originals = {str(film.get("id")): film for film in load_films()}
+        originals = {item_key(film): film for film in load_films()}
         for collection in (self.results, self.display_results):
             for film in collection:
-                film_id = str(film.get("id"))
+                film_id = item_key(film)
                 original = originals.get(film_id)
                 if film_id not in dirty_ids or original is None:
                     continue
@@ -2405,7 +2518,7 @@ class FilmsImporter(QWidget):
             COL_RATING: lambda item: float(item.get("tmdb_vote_average") or 0),
             COL_VOTES: lambda item: int(item.get("tmdb_vote_count") or 0),
             COL_POPULARITY: lambda item: float(item.get("tmdb_popularity") or 0),
-            COL_IMPORTED: lambda item: 1 if str(item.get("id")) in imported else 0,
+            COL_IMPORTED: lambda item: 1 if item_key(item) in imported else 0,
         }
         sorter = sorters.get(column)
         if sorter is None:
@@ -2447,19 +2560,19 @@ class FilmsImporter(QWidget):
 
     def select_all_results(self) -> None:
         for film in self.page_items():
-            self.selected_ids.add(str(film.get("id")))
+            self.selected_ids.add(item_key(film))
         self.refresh_table()
 
     def clear_all_results(self) -> None:
         for film in self.page_items():
-            self.selected_ids.discard(str(film.get("id")))
+            self.selected_ids.discard(item_key(film))
         self.refresh_table()
 
     def selected_result_films(self) -> list[dict[str, Any]]:
         return [
             film
             for film in self.display_results
-            if str(film.get("id")) in self.selected_ids
+            if item_key(film) in self.selected_ids
         ]
 
     def create_spotify_playlist_from_selected(self) -> None:
@@ -2521,14 +2634,15 @@ class FilmsImporter(QWidget):
             return
         try:
             films = load_films()
-            by_id = {str(item.get("id")): item for item in films}
+            by_id = {item_key(item): item for item in films}
             tmdb_client = TMDBClient()
             added = 0
             duplicates = 0
             for item in selected:
                 film_id = str(item.get("id"))
-                if film_id in by_id:
-                    existing = by_id[film_id]
+                film_key = item_key(item)
+                if film_key in by_id:
+                    existing = by_id[film_key]
                     if needs_credits_update(existing):
                         self.last_operation = f"Consultando créditos: {existing.get('title') or film_id}"
                         self.update_status()
@@ -2537,8 +2651,8 @@ class FilmsImporter(QWidget):
                     continue
                 clean = {
                     "id": film_id,
-                    "tmdb_type": "movie",
-                    "type": 1,
+                    "tmdb_type": media_type_for_item(item),
+                    "type": MEDIA_TYPE_VALUES[media_type_for_item(item)],
                     "poster": item.get("poster"),
                     "title": item.get("title") or "",
                     "original_title": item.get("original_title") or "",
@@ -2559,7 +2673,7 @@ class FilmsImporter(QWidget):
                 self.last_operation = f"Consultando créditos: {clean.get('title') or film_id}"
                 self.update_status()
                 enrich_movies_with_credits([clean], tmdb_client)
-                by_id[film_id] = clean
+                by_id[item_key(clean)] = clean
                 added += 1
             save_films(list(by_id.values()))
             self.last_operation = f"{added} añadidas, {duplicates} ya existían"
@@ -2575,9 +2689,9 @@ class FilmsImporter(QWidget):
         if not selected:
             self.show_error("No hay películas seleccionadas.")
             return
-        selected_ids = {str(item.get("id")) for item in selected}
+        selected_ids = {item_key(item) for item in selected}
         existing = load_films()
-        remove_count = sum(1 for item in existing if str(item.get("id")) in selected_ids)
+        remove_count = sum(1 for item in existing if item_key(item) in selected_ids)
         if remove_count == 0:
             self.last_operation = "Ninguna seleccionada estaba importada"
             self.update_status()
@@ -2592,7 +2706,7 @@ class FilmsImporter(QWidget):
         if answer != QMessageBox.StandardButton.Yes:
             return
         try:
-            remaining = [item for item in existing if str(item.get("id")) not in selected_ids]
+            remaining = [item for item in existing if item_key(item) not in selected_ids]
             save_films(remaining)
             self.last_operation = f"{remove_count} eliminadas"
             self.refresh_table()
