@@ -1,10 +1,10 @@
 {
-  "identifier": "2f6f5cf0-87a2-42c6-b5a8-5f64c53c3b77",
+  "identifier": "3f4d4fca-8b72-49cb-b9b7-82df0c6d63a8",
   "game-modes": [
     "turn-based",
     "competitive"
   ],
   "catalog-type": "movies",
-  "name": "Películas",
-  "descripcion": "Bandas sonoras, escenas y películas memorables"
+  "name": "Películas y Series (Kids)",
+  "descripcion": "Escucha la canción y adivina a qué película o serie está asociada (versión Kids)"
 }
