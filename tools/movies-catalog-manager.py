@@ -80,8 +80,8 @@ FILMS_CACHE_DIR = APP_DIR / "films_cache"
 POSTER_CACHE_DIR = APP_DIR / "poster_cache"
 PENDING_SOUNDTRACK_RECOMMENDATIONS_FILE = APP_DIR / "pending_soundtrack_recommendations.md"
 
-TMDB_BEARER_TOKEN = "<TMDB_BEARER_TOKEN>"
-TMDB_API_KEY = "<TMDB_API_KEY>"
+TMDB_BEARER_TOKEN = ""
+TMDB_API_KEY = ""
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500"
 LANGUAGE = "es-ES"
@@ -117,8 +117,8 @@ POSTER_CACHE_SIZE = (184, 276)
 POSTER_DISPLAY_SIZE = (152, 216)
 POSTER_CELL_SIZE = (164, 226)
 
-SPOTIFY_CLIENT_ID = "<SPOTIFY_CLIENT_ID>"
-SPOTIFY_CLIENT_SECRET = "<SPOTIFY_CLIENT_SECRET>"
+SPOTIFY_CLIENT_ID = ""
+SPOTIFY_CLIENT_SECRET = ""
 
 SPOTIFY_TRACK_URI = "spotify:track:{spotify_id}"
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
@@ -1272,7 +1272,7 @@ def update_missing_local_credits(
     if not missing:
         return False
     if progress:
-        progress(f"Actualizando créditos de films.json: {len(missing)} pendientes")
+        progress(f"Actualizando créditos de movies.json: {len(missing)} pendientes")
     client = TMDBClient()
     changed = False
     total = len(missing)
@@ -1284,7 +1284,7 @@ def update_missing_local_credits(
                 changed = True
             continue
         if progress:
-            progress(f"Actualizando créditos de films.json: {index}/{total}")
+            progress(f"Actualizando créditos de movies.json: {index}/{total}")
         credits = client.get(f"/{media_type_for_item(film)}/{movie_id}/credits", {"language": LANGUAGE})
         director, known_actor = credits_names(credits)
         film_changed = apply_credits_result(film, director, known_actor)
@@ -1376,7 +1376,7 @@ class SearchWorker(QThread):
                 self.finished_ok.emit(items, "TMDB")
             else:
                 items = local_search(self.params, self.progress.emit)
-                self.finished_ok.emit(items, "films.json")
+                self.finished_ok.emit(items, "movies.json")
         except AppError as exc:
             self.failed.emit(str(exc))
         except Exception:
@@ -1549,7 +1549,7 @@ class FilmsImporter(QWidget):
         filters_layout.setSpacing(6)
 
         self.tmdb_radio = QRadioButton("TMDB")
-        self.local_radio = QRadioButton("films.json")
+        self.local_radio = QRadioButton("movies.json")
         self.tmdb_radio.setChecked(True)
         self.source_group = QButtonGroup(self)
         self.source_group.addButton(self.tmdb_radio)
@@ -1824,7 +1824,7 @@ class FilmsImporter(QWidget):
         self.limit_combo.setEnabled(is_tmdb)
         self.difficulty_filter_combo.setEnabled(not is_tmdb)
         self.relevance_filter_combo.setEnabled(not is_tmdb)
-        self.current_source_label = "TMDB" if is_tmdb else "films.json"
+        self.current_source_label = "TMDB" if is_tmdb else "movies.json"
         self.update_action_visibility()
         self.update_status()
 
@@ -1989,7 +1989,7 @@ class FilmsImporter(QWidget):
                         COL_POPULARITY,
                 ):
                     item.setTextAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
-                if self.current_source_label == "films.json" and index in EDITABLE_MUSIC_COLUMNS:
+                if self.current_source_label == "movies.json" and index in EDITABLE_MUSIC_COLUMNS:
                     item.setFlags(item.flags() | Qt.ItemFlag.ItemIsEditable)
                 else:
                     item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
@@ -2085,8 +2085,8 @@ class FilmsImporter(QWidget):
         index = self.table.indexAt(pos)
         if not index.isValid() or index.column() != COL_SPOTIFY_ID:
             return
-        if self.current_source_label != "films.json":
-            self.show_error("La seleccion de banda sonora esta disponible en la vista films.json.")
+        if self.current_source_label != "movies.json":
+            self.show_error("La seleccion de banda sonora esta disponible en la vista movies.json.")
             return
 
         row = index.row()
@@ -2150,7 +2150,7 @@ class FilmsImporter(QWidget):
         self.update_status()
 
     def populate_spotify_info_for_current_page(self) -> None:
-        if self.current_source_label != "films.json":
+        if self.current_source_label != "movies.json":
             return
         dirty_ids = self.current_page_dirty_ids()
         candidates = [
@@ -2194,7 +2194,7 @@ class FilmsImporter(QWidget):
         try:
             save_films(films)
         except Exception:
-            self.show_error("No se pudo escribir films.json.")
+            self.show_error("No se pudo escribir movies.json.")
             return
         self.apply_spotify_updates_to_current_results(by_id, updated_ids)
         self.last_operation = f"{len(updated_ids)} canciones actualizadas desde Spotify"
@@ -2338,7 +2338,7 @@ class FilmsImporter(QWidget):
             self.create_spotify_playlist_button.setEnabled(bool(self.selected_spotify_ids()))
 
     def update_change_buttons(self) -> None:
-        enabled = self.current_source_label == "films.json" and bool(self.current_page_dirty_ids())
+        enabled = self.current_source_label == "movies.json" and bool(self.current_page_dirty_ids())
         if hasattr(self, "save_changes_button"):
             self.save_changes_button.setEnabled(enabled)
         if hasattr(self, "discard_changes_button"):
@@ -2369,7 +2369,7 @@ class FilmsImporter(QWidget):
         try:
             save_films(films)
         except Exception:
-            self.show_error("No se pudo escribir films.json.")
+            self.show_error("No se pudo escribir movies.json.")
             return
         self.dirty_song_ids.difference_update(dirty_ids)
         self.dirty_rating_ids.difference_update(dirty_ids)
@@ -2439,7 +2439,7 @@ class FilmsImporter(QWidget):
                 self.selected_ids.add(film_id)
             else:
                 self.selected_ids.discard(film_id)
-        elif column in EDITABLE_MUSIC_COLUMNS and self.current_source_label == "films.json":
+        elif column in EDITABLE_MUSIC_COLUMNS and self.current_source_label == "movies.json":
             fields = {
                 COL_SONG: "song",
                 COL_SONG_AUTHOR: "song_author",
@@ -2470,7 +2470,7 @@ class FilmsImporter(QWidget):
     def handle_cell_clicked(self, row: int, column: int) -> None:
         if column not in EDITABLE_RATING_COLUMNS:
             return
-        if self.current_source_label != "films.json":
+        if self.current_source_label != "movies.json":
             return
         item = self.table.item(row, column)
         if item is None:
@@ -2682,7 +2682,7 @@ class FilmsImporter(QWidget):
         except AppError as exc:
             self.show_error(str(exc))
         except Exception:
-            self.show_error("No se pudo escribir films.json.")
+            self.show_error("No se pudo escribir movies.json.")
 
     def remove_selected(self) -> None:
         selected = self.selected_result_films()
@@ -2712,7 +2712,7 @@ class FilmsImporter(QWidget):
             self.refresh_table()
             self.update_status()
         except Exception:
-            self.show_error("No se pudo escribir films.json.")
+            self.show_error("No se pudo escribir movies.json.")
 
     def refresh_genres(self) -> None:
         try:
@@ -2747,7 +2747,7 @@ class FilmsImporter(QWidget):
         pages = self.page_count()
         current = self.current_page + 1 if pages else 0
         self.status_label.setText(
-            f"films.json: {films_count} películas  |  "
+            f"movies.json: {films_count} películas  |  "
             f"Fuente: {self.current_source_label}  |  "
             f"Página: {current} / {pages}  |  "
             f"Resultados: {len(self.display_results)}  |  "
