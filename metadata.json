@@ -1,0 +1,24 @@
+{
+  "game-modes": [
+    {
+      "identifier": "turn-based",
+      "name": "Turnos",
+      "description": "Cada jugador en su turno juega sus propias cartas"
+    },
+    {
+      "identifier": "competitive",
+      "name": "Competitivo",
+      "description": "Todos los jugadores juegan todas las cartas al mismo tiempo"
+    }
+  ],
+  "catalog-types": [
+    {
+      "identifier": "films",
+      "descripcion": "El catálogo incluye información de películas y/o series"
+    },
+    {
+      "identifier": "music",
+      "descripcion": "El catálogo incluye información de canciones"
+    }
+  ]
+}
