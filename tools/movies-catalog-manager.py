@@ -87,8 +87,8 @@ FILMS_CACHE_DIR = APP_DIR / "films_cache"
 POSTER_CACHE_DIR = APP_DIR / "poster_cache"
 PENDING_SOUNDTRACK_RECOMMENDATIONS_FILE = APP_DIR / "pending_soundtrack_recommendations.md"
 
-TMDB_BEARER_TOKEN = ""
-TMDB_API_KEY = ""
+TMDB_BEARER_TOKEN = "TMDB_BEARER_TOKEN"
+TMDB_API_KEY = "TMDB_API_KEY"
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500"
 LANGUAGE = "es-ES"
@@ -124,8 +124,8 @@ POSTER_CACHE_SIZE = (184, 276)
 POSTER_DISPLAY_SIZE = (152, 216)
 POSTER_CELL_SIZE = (164, 226)
 
-SPOTIFY_CLIENT_ID = ""
-SPOTIFY_CLIENT_SECRET = ""
+SPOTIFY_CLIENT_ID = "SPOTIFY_CLIENT_ID"
+SPOTIFY_CLIENT_SECRET = "SPOTIFY_CLIENT_SECRET"
 
 SPOTIFY_TRACK_URI = "spotify:track:{spotify_id}"
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
@@ -353,6 +353,14 @@ def load_films() -> list[dict[str, Any]]:
         if isinstance(catalog, list):
             return catalog
     return []
+
+
+def catalog_type_counts(films: list[dict[str, Any]]) -> dict[str, int]:
+    counts = {MEDIA_TYPE_MOVIE: 0, MEDIA_TYPE_TV: 0}
+    for film in films:
+        media_type = media_type_for_item(film)
+        counts[media_type] = counts.get(media_type, 0) + 1
+    return counts
 
 
 def save_films(films: list[dict[str, Any]]) -> None:
@@ -2965,14 +2973,18 @@ class FilmsImporter(QWidget):
             self.update_status()
 
     def update_status(self) -> None:
-        films_count = len(load_films())
+        films = load_films()
+        films_count = len(films)
+        type_counts = catalog_type_counts(films)
         pages = self.page_count()
         current = self.current_page + 1 if pages else 0
         self.status_label.setText(
-            f"{catalog_label()}: {films_count} peliculas  |  "
+            f"{catalog_label()}: {films_count} registros "
+            f"({type_counts.get(MEDIA_TYPE_MOVIE, 0)} peliculas, "
+            f"{type_counts.get(MEDIA_TYPE_TV, 0)} series)  |  "
             f"Fuente: {self.current_source_label}  |  "
             f"Página: {current} / {pages}  |  "
-            f"Resultados: {len(self.display_results)}  |  "
+            f"Resultados filtrados: {len(self.display_results)}  |  "
             f"Seleccionadas: {len(self.selected_ids)}  |  "
             f"Última operación: {self.last_operation}"
         )
