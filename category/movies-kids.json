@@ -9,7 +9,7 @@
     "catalog-type": "movies",
     "name": "Películas y Series (Kids)",
     "description": "Escucha la canción y adivina a qué película o serie está asociada (versión Kids)",
-    "clues_supported": "false"
+    "clues_supported": []
   },
   "genres": {
     "12": "Aventura",

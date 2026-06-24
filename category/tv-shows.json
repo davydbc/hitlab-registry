@@ -9,7 +9,7 @@
     "catalog-type": "movies",
     "name": "Tv Shows",
     "description": "Escucha la canción y adivina a qué serie de televisión está asociada",
-    "clues_supported": "false"
+    "clues_supported": ["genres", "year", "title"]
   },
   "genres": {
     "12": "Aventura",
