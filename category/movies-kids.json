@@ -2898,6 +2898,31 @@
       "spotify_id": "7n5oagoStNwmIW0HLQGwb0"
     },
     {
+      "id": "578",
+      "tmdb_type": "movie",
+      "type": 1,
+      "poster": "https://image.tmdb.org/t/p/w500/aCqHb3eFQV8raX30OfGurqPlpjh.jpg",
+      "title": "Tiburón",
+      "original_title": "Jaws",
+      "year": 1975,
+      "date": "1975-12-18",
+      "genres": [
+        27,
+        53,
+        12
+      ],
+      "director": "Steven Spielberg",
+      "known_actor": "Roy Scheider, Richard Dreyfuss",
+      "credits_selection_version": 2,
+      "score": 13.7358,
+      "tmdb_vote_average": 7.683,
+      "tmdb_vote_count": 11578,
+      "tmdb_popularity": 20.1869,
+      "song": "Jaws Main Theme (From \"Jaws\")",
+      "song_author": "Geek Music",
+      "spotify_id": "0C5o6yIrcFab0YS3GUYwp9"
+    },
+    {
       "id": "862",
       "tmdb_type": "movie",
       "type": 1,
