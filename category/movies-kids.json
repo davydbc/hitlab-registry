@@ -2847,6 +2847,31 @@
       "spotify_id": "3PCXLtid4Y3BGdCBW0pDEG"
     },
     {
+      "id": "1924",
+      "tmdb_type": "movie",
+      "type": 1,
+      "poster": "https://image.tmdb.org/t/p/w500/sYJGXqaDQzJ2qu2bhMDyTFtww7q.jpg",
+      "title": "Superman",
+      "original_title": "Superman",
+      "year": 1979,
+      "date": "1979-02-08",
+      "genres": [
+        878,
+        28,
+        12
+      ],
+      "director": "Richard Donner",
+      "known_actor": "Christopher Reeve, Gene Hackman",
+      "credits_selection_version": 2,
+      "score": 12.2396,
+      "tmdb_vote_average": 7.166,
+      "tmdb_vote_count": 4294,
+      "tmdb_popularity": 8.1287,
+      "song": "Theme from Superman - Concert Version",
+      "song_author": "John Williams",
+      "spotify_id": "4tABZngfyleLXr5wxHgRxZ"
+    },
+    {
       "id": "37135",
       "tmdb_type": "movie",
       "type": 1,

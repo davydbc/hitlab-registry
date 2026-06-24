@@ -7964,6 +7964,30 @@
       "relevance": 3
     },
     {
+      "id": "9336",
+      "tmdb_type": "movie",
+      "type": 1,
+      "poster": "https://image.tmdb.org/t/p/w500/wmphZLnqARmCvjFvYkBAMhlsmNl.jpg",
+      "title": "Loca academia de policía",
+      "original_title": "Police Academy",
+      "year": 1984,
+      "date": "1984-07-02",
+      "genres": [
+        35,
+        80
+      ],
+      "director": "Hugh Wilson",
+      "known_actor": "Steve Guttenberg, Kim Cattrall",
+      "credits_selection_version": 2,
+      "score": 11.3891,
+      "tmdb_vote_average": 6.713,
+      "tmdb_vote_count": 3012,
+      "tmdb_popularity": 5.2812,
+      "song": "Main Theme - From \"Police Academy\"",
+      "song_author": "London Music Works",
+      "spotify_id": "57feAoAx0AkUZL9YskARaF"
+    },
+    {
       "id": "100",
       "tmdb_type": "movie",
       "type": 1,
