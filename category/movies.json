@@ -9,7 +9,12 @@
     "catalog-type": "movies",
     "name": "Películas",
     "description": "Escucha la canción y adivina a qué película está asociada",
-    "clues_supported": ["genres", "year", "person"]
+    "clues_supported": [
+      "genres",
+      "year",
+      "person",
+      "title"
+    ]
   },
   "genres": {
     "12": "Aventura",
