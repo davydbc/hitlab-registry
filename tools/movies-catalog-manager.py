@@ -87,8 +87,8 @@ FILMS_CACHE_DIR = APP_DIR / "films_cache"
 POSTER_CACHE_DIR = APP_DIR / "poster_cache"
 PENDING_SOUNDTRACK_RECOMMENDATIONS_FILE = APP_DIR / "pending_soundtrack_recommendations.md"
 
-TMDB_BEARER_TOKEN = "TMDB_BEARER_TOKEN"
-TMDB_API_KEY = "TMDB_API_KEY"
+TMDB_BEARER_TOKEN = ""
+TMDB_API_KEY = ""
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500"
 LANGUAGE = "es-ES"
@@ -124,8 +124,8 @@ POSTER_CACHE_SIZE = (184, 276)
 POSTER_DISPLAY_SIZE = (152, 216)
 POSTER_CELL_SIZE = (164, 226)
 
-SPOTIFY_CLIENT_ID = "SPOTIFY_CLIENT_ID"
-SPOTIFY_CLIENT_SECRET = "SPOTIFY_CLIENT_SECRET"
+SPOTIFY_CLIENT_ID = ""
+SPOTIFY_CLIENT_SECRET = ""
 
 SPOTIFY_TRACK_URI = "spotify:track:{spotify_id}"
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
