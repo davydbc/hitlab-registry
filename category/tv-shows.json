@@ -9,7 +9,11 @@
     "catalog-type": "movies",
     "name": "Tv Shows",
     "description": "Escucha la canción y adivina a qué serie de televisión está asociada",
-    "clues_supported": ["genres", "year", "title"]
+    "clues_supported": [
+      "genres",
+      "year",
+      "title"
+    ]
   },
   "genres": {
     "12": "Aventura",
@@ -58,6 +62,29 @@
       "song_author": "TV Sounds Unlimited",
       "spotify_id": "0Ut4GgEsCQq2pOiQEsMaYJ",
       "difficulty": 4
+    },
+    {
+      "id": "111",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/sYNk7nES9qUIXXICXILo3MOU4qt.jpg",
+      "title": "7 vidas",
+      "original_title": "7 vidas",
+      "year": 1999,
+      "date": "1999-01-17",
+      "genres": [
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Blanca Portillo, Paz Vega",
+      "credits_selection_version": 2,
+      "score": 9.1695,
+      "tmdb_vote_average": 6.0,
+      "tmdb_vote_count": 24,
+      "tmdb_popularity": 14.1716,
+      "song": "",
+      "song_author": "",
+      "spotify_id": ""
     },
     {
       "id": "790",
@@ -265,6 +292,29 @@
       "difficulty": 4
     },
     {
+      "id": "2282",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/db9cSJfLugDSGfsW4tqMTPGupVT.jpg",
+      "title": "Aquí no hay quien viva",
+      "original_title": "Aquí no hay quien viva",
+      "year": 2003,
+      "date": "2003-09-07",
+      "genres": [
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Malena Alterio, Beatriz Carvajal",
+      "credits_selection_version": 2,
+      "score": 12.1327,
+      "tmdb_vote_average": 8.373,
+      "tmdb_vote_count": 200,
+      "tmdb_popularity": 8.3536,
+      "song": "",
+      "song_author": "",
+      "spotify_id": ""
+    },
+    {
       "id": "10283",
       "tmdb_type": "tv",
       "type": 2,
@@ -368,6 +418,32 @@
       "difficulty": 3
     },
     {
+      "id": "62264",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/pwBRar4aR3vULlChmkjPW2AHY19.jpg",
+      "title": "Ash vs Evil Dead",
+      "original_title": "Ash vs Evil Dead",
+      "year": 2015,
+      "date": "2015-10-31",
+      "genres": [
+        35,
+        10759,
+        10765
+      ],
+      "director": "<unknown>",
+      "known_actor": "Bruce Campbell",
+      "credits_selection_version": 2,
+      "score": 12.5616,
+      "tmdb_vote_average": 7.742,
+      "tmdb_vote_count": 1754,
+      "tmdb_popularity": 10.2256,
+      "song": "Ash's Theme",
+      "song_author": "Joseph Loduca",
+      "spotify_id": "5hS5ZoJZucKVibcoPnOZY9",
+      "difficulty": 3
+    },
+    {
       "id": "62110",
       "tmdb_type": "tv",
       "type": 2,
@@ -419,6 +495,30 @@
       "song_author": "Samuel Kim",
       "spotify_id": "7gIoMBxRQPIDokN6T4QJZ5",
       "difficulty": 5
+    },
+    {
+      "id": "1032",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/poEaDSpLbpKeA2OI4n2X6K4udYd.jpg",
+      "title": "Aída",
+      "original_title": "Aída",
+      "year": 2005,
+      "date": "2005-01-16",
+      "genres": [
+        35,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Paco León, Pepe Viyuela",
+      "credits_selection_version": 2,
+      "score": 11.8713,
+      "tmdb_vote_average": 7.891,
+      "tmdb_vote_count": 266,
+      "tmdb_popularity": 9.8605,
+      "song": "",
+      "song_author": "",
+      "spotify_id": ""
     },
     {
       "id": "1438",
@@ -804,6 +904,33 @@
       "difficulty": 2
     },
     {
+      "id": "1018",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/wQ1iVrG871anxkEUwWTRdPRi0j1.jpg",
+      "title": "Bonanza",
+      "original_title": "Bonanza",
+      "year": 1959,
+      "date": "1959-09-12",
+      "genres": [
+        37,
+        10759,
+        18,
+        10751
+      ],
+      "director": "<unknown>",
+      "known_actor": "Lorne Greene, Michael Landon",
+      "credits_selection_version": 2,
+      "score": 12.7849,
+      "tmdb_vote_average": 7.521,
+      "tmdb_vote_count": 478,
+      "tmdb_popularity": 51.769,
+      "song": "Theme - From \"Bonanza\"",
+      "song_author": "Ray Evans, Jerry Livingston, The City of Prague Philharmonic Orchestra, Nicholas Charles Raine",
+      "spotify_id": "3STVHSJR6ZPGg9CI0aNP9q",
+      "difficulty": 4
+    },
+    {
       "id": "1911",
       "tmdb_type": "tv",
       "type": 2,
@@ -1107,6 +1234,32 @@
       "difficulty": 2
     },
     {
+      "id": "77169",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/imfqLcv6oHNn6bDdEUUUlxy0Ch9.jpg",
+      "title": "Cobra Kai",
+      "original_title": "Cobra Kai",
+      "year": 2018,
+      "date": "2018-05-02",
+      "genres": [
+        10759,
+        18,
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "William Zabka",
+      "credits_selection_version": 2,
+      "score": 14.4798,
+      "tmdb_vote_average": 8.2,
+      "tmdb_vote_count": 6911,
+      "tmdb_popularity": 41.3441,
+      "song": "Strike First",
+      "song_author": "Leo Birenberg & Zach Robinson",
+      "spotify_id": "1CnnuWRu1m39e7E9pUSD8x",
+      "difficulty": 3
+    },
+    {
       "id": "2710",
       "tmdb_type": "tv",
       "type": 2,
@@ -1178,6 +1331,31 @@
       "song": "At Least It Was Here (\"Community\" Main Title Version)",
       "song_author": "The 88",
       "spotify_id": "6z6eclt9o5pGZ41tGHfulf",
+      "difficulty": 2
+    },
+    {
+      "id": "68662",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/pyM9Y8Lee9uLAazhNhhViEwlO4X.jpg",
+      "title": "Compañeros",
+      "original_title": "Compañeros",
+      "year": 1998,
+      "date": "1998-03-25",
+      "genres": [
+        35,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Eva Santolaria, Antonio Hortelano",
+      "credits_selection_version": 2,
+      "score": 7.6669,
+      "tmdb_vote_average": 5.692,
+      "tmdb_vote_count": 13,
+      "tmdb_popularity": 2.569,
+      "song": "No te fallaré - Compañeros",
+      "song_author": "Los Lunes Que Quedan",
+      "spotify_id": "7KCzR053ytspeb4H6EpXWl",
       "difficulty": 2
     },
     {
@@ -1306,6 +1484,56 @@
       "song_author": "TV Sounds Unlimited",
       "spotify_id": "4atZ2klyOmwmuZx1JjG9jc",
       "difficulty": 4
+    },
+    {
+      "id": "19522",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/uakaSl6NkXE7M2cybhhI3DoU2wE.jpg",
+      "title": "Curro Jiménez",
+      "original_title": "Curro Jiménez",
+      "year": 1976,
+      "date": "1976-12-22",
+      "genres": [
+        10759,
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Sancho Gracia, José Sancho",
+      "credits_selection_version": 2,
+      "score": 9.6658,
+      "tmdb_vote_average": 7.278,
+      "tmdb_vote_count": 9,
+      "tmdb_popularity": 7.4179,
+      "song": "Sintonía de Curro Jiménez",
+      "song_author": "Luis Carmelo Notas de Amor",
+      "spotify_id": "4Lrx6eHjz366tDzv62cLkr",
+      "difficulty": 5
+    },
+    {
+      "id": "7897",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/lF0ip8ZAvweDTuhMaUD1dH3SYhs.jpg",
+      "title": "Cuéntame cómo pasó",
+      "original_title": "Cuéntame cómo pasó",
+      "year": 2001,
+      "date": "2001-09-13",
+      "genres": [
+        35,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Imanol Arias",
+      "credits_selection_version": 2,
+      "score": 10.8329,
+      "tmdb_vote_average": 7.069,
+      "tmdb_vote_count": 58,
+      "tmdb_popularity": 20.3161,
+      "song": "Cuéntame",
+      "song_author": "Formula V",
+      "spotify_id": "6buqYaAyimysMjE8yuiaXy",
+      "difficulty": 1
     },
     {
       "id": "1100",
@@ -1771,6 +1999,32 @@
       "difficulty": 3
     },
     {
+      "id": "2913",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/6adgfphaWB2Q7YddrUSrREB6Ezq.jpg",
+      "title": "El club de medianoche",
+      "original_title": "Are You Afraid of the Dark?",
+      "year": 1992,
+      "date": "1992-08-15",
+      "genres": [
+        9648,
+        10762,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Daniel DeSanto, Vanessa Lengies",
+      "credits_selection_version": 2,
+      "score": 12.8434,
+      "tmdb_vote_average": 8.193,
+      "tmdb_vote_count": 618,
+      "tmdb_popularity": 16.344,
+      "song": "Are You Afraid of the Dark Opening Theme",
+      "song_author": "Jason Lazarus, Joseph Trapanese",
+      "spotify_id": "4JTj10krvJaV9NDOYX0BUJ",
+      "difficulty": 5
+    },
+    {
       "id": "2384",
       "tmdb_type": "tv",
       "type": 2,
@@ -1849,6 +2103,31 @@
       "difficulty": 1
     },
     {
+      "id": "62017",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/4IljeGfUK3QpYxDUJKyi7K411Ro.jpg",
+      "title": "El hombre en el castillo",
+      "original_title": "The Man in the High Castle",
+      "year": 2015,
+      "date": "2015-01-15",
+      "genres": [
+        10765,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Alexa Davalos, Rufus Sewell",
+      "credits_selection_version": 2,
+      "score": 12.8437,
+      "tmdb_vote_average": 7.527,
+      "tmdb_vote_count": 1489,
+      "tmdb_popularity": 25.8544,
+      "song": "The Man In The High Castle - Edelweiss - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "3p2hQvsQJ7X6jiIwjRYdtb",
+      "difficulty": 4
+    },
+    {
       "id": "4035",
       "tmdb_type": "tv",
       "type": 2,
@@ -1897,9 +2176,9 @@
       "tmdb_vote_average": 8.032,
       "tmdb_vote_count": 2997,
       "tmdb_popularity": 75.1907,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "https://open.spotify.com/intl-es/album/1tXVQacihj2fYz7aPX9lF4",
+      "song": "Young Sheldon: Mighty Little Man",
+      "song_author": "Geek Music",
+      "spotify_id": "75WO7qXxW2Oq2keZd2IfBu",
       "difficulty": 4
     },
     {
@@ -1953,6 +2232,30 @@
       "song_author": "Blake Neely",
       "spotify_id": "3Sw4YN3tnfVY94ZLkynVs0",
       "difficulty": 4
+    },
+    {
+      "id": "62099",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/sNv6aE47PTTTpHknT3gzmF2rBgh.jpg",
+      "title": "El Ministerio del Tiempo",
+      "original_title": "El Ministerio del Tiempo",
+      "year": 2015,
+      "date": "2015-02-24",
+      "genres": [
+        18,
+        10759
+      ],
+      "director": "<unknown>",
+      "known_actor": "Rodolfo Sancho, Macarena García",
+      "credits_selection_version": 2,
+      "score": 11.4587,
+      "tmdb_vote_average": 7.6,
+      "tmdb_vote_count": 206,
+      "tmdb_popularity": 9.6782,
+      "song": "",
+      "song_author": "",
+      "spotify_id": ""
     },
     {
       "id": "230",
@@ -2058,6 +2361,33 @@
       "difficulty": 4
     },
     {
+      "id": "32605",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/ovnDYxgMCvifEAeRnr0g4uSR5oz.jpg",
+      "title": "El show de los Looney Tunes",
+      "original_title": "The Looney Tunes Show",
+      "year": 2011,
+      "date": "2011-05-03",
+      "genres": [
+        16,
+        35,
+        10751,
+        10762
+      ],
+      "director": "<unknown>",
+      "known_actor": "Jeff Bergman, Bob Bergen, Kristen Wiig",
+      "credits_selection_version": 2,
+      "score": 12.7558,
+      "tmdb_vote_average": 8.107,
+      "tmdb_vote_count": 563,
+      "tmdb_popularity": 17.4079,
+      "song": "Overture - Merrie Melodies Main Title Music",
+      "song_author": "Bugs Bunny",
+      "spotify_id": "6MrchP73f6ZujAWzwremvS",
+      "difficulty": 1
+    },
+    {
       "id": "4459",
       "tmdb_type": "tv",
       "type": 2,
@@ -2081,6 +2411,33 @@
       "song_author": "Various Artists",
       "spotify_id": "2w4geIJmSDCXA5nxTyc81c",
       "difficulty": 3
+    },
+    {
+      "id": "7842",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/um2758jtENjV7WwgP56aCPLfQGo.jpg",
+      "title": "El Show de Tom y Jerry",
+      "original_title": "The Tom and Jerry Show",
+      "year": 1975,
+      "date": "1975-09-06",
+      "genres": [
+        10762,
+        16,
+        10751,
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "John Stephenson",
+      "credits_selection_version": 2,
+      "score": 12.1617,
+      "tmdb_vote_average": 7.7,
+      "tmdb_vote_count": 1166,
+      "tmdb_popularity": 7.5068,
+      "song": "Tom And Jerry Main Theme (From \"Tom And Jerry\")",
+      "song_author": "Geek Music",
+      "spotify_id": "5sFKd7dVlGoOuXl2usSZuW",
+      "difficulty": 4
     },
     {
       "id": "1415",
@@ -2134,6 +2491,56 @@
       "song_author": "KnightsBridge",
       "spotify_id": "1zQKAWfUTWDIAmJkHaT9y0",
       "difficulty": 4
+    },
+    {
+      "id": "61733",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/j7Y4uVrGydvkj3EXxwaOawaOJs5.jpg",
+      "title": "Empire",
+      "original_title": "Empire",
+      "year": 2015,
+      "date": "2015-01-07",
+      "genres": [
+        18,
+        10766
+      ],
+      "director": "<unknown>",
+      "known_actor": "Terrence Howard, Taraji P. Henson",
+      "credits_selection_version": 2,
+      "score": 12.3075,
+      "tmdb_vote_average": 7.147,
+      "tmdb_vote_count": 756,
+      "tmdb_popularity": 32.1823,
+      "song": "Good Enough (feat. Jussie Smollett)",
+      "song_author": "Empire Cast, Jussie Smollett",
+      "spotify_id": "0iqY4f4lNp2Bh1rthklY1q",
+      "difficulty": 4
+    },
+    {
+      "id": "1940",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/wA7OLgBCyPiqi3nNkuTUcNbJtRo.jpg",
+      "title": "Entourage: El séquito",
+      "original_title": "Entourage",
+      "year": 2004,
+      "date": "2004-07-18",
+      "genres": [
+        35,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Kevin Connolly, Adrian Grenier",
+      "credits_selection_version": 2,
+      "score": 12.5805,
+      "tmdb_vote_average": 7.36,
+      "tmdb_vote_count": 652,
+      "tmdb_popularity": 39.1527,
+      "song": "Superhero (Main Theme from \"Entourage\")",
+      "song_author": "TV Themes",
+      "spotify_id": "1fXbvJYvweF33oOaybMjvT",
+      "difficulty": 3
     },
     {
       "id": "1606",
@@ -2288,6 +2695,53 @@
       "difficulty": 4
     },
     {
+      "id": "77555",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/rYHpGglzDjGlRtsqb2O52ktfnmW.jpg",
+      "title": "Fariña",
+      "original_title": "Fariña",
+      "year": 2018,
+      "date": "2018-02-28",
+      "genres": [
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Javier Rey, Tristán Ulloa",
+      "credits_selection_version": 2,
+      "score": 10.1996,
+      "tmdb_vote_average": 7.381,
+      "tmdb_vote_count": 67,
+      "tmdb_popularity": 3.5438,
+      "song": "Fariña",
+      "song_author": "Ivan Ferreiro",
+      "spotify_id": "3pa8gSXNMT7aOBpEwj6xLy",
+      "difficulty": 1
+    },
+    {
+      "id": "70217",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/9eq3NflCfH96omBwajeuTaiHdIY.jpg",
+      "title": "Farmacia de guardia",
+      "original_title": "Farmacia de guardia",
+      "year": 1991,
+      "date": "1991-09-19",
+      "genres": [
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Concha Cuetos, Carlos Larrañaga",
+      "credits_selection_version": 2,
+      "score": 8.5733,
+      "tmdb_vote_average": 6.214,
+      "tmdb_vote_count": 14,
+      "tmdb_popularity": 5.1488,
+      "song": "",
+      "song_author": "",
+      "spotify_id": ""
+    },
+    {
       "id": "1437",
       "tmdb_type": "tv",
       "type": 2,
@@ -2439,6 +2893,31 @@
       "song": "Futurama Main Theme - From \"Futurama\"/TV Version",
       "song_author": "Christopher Tyng",
       "spotify_id": "6Lp427N88qjO6tIhTngQyt",
+      "difficulty": 1
+    },
+    {
+      "id": "21631",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/5KLAEArPsbnbdNQ1hKjNDbzHbNU.jpg",
+      "title": "Física o química",
+      "original_title": "Física o química",
+      "year": 2008,
+      "date": "2008-02-04",
+      "genres": [
+        18,
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Andrea Duro",
+      "credits_selection_version": 2,
+      "score": 11.939,
+      "tmdb_vote_average": 8.3,
+      "tmdb_vote_count": 303,
+      "tmdb_popularity": 4.8984,
+      "song": "Física o química",
+      "song_author": "Despistaos",
+      "spotify_id": "79eUc9cUUoUOO1b5znphiU",
       "difficulty": 1
     },
     {
@@ -2691,9 +3170,9 @@
       "tmdb_vote_average": 7.396,
       "tmdb_vote_count": 424,
       "tmdb_popularity": 15.6666,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "He-Man And The Masters Of The Universe - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "0EUvzAkWzu9AwAS8tIkoAR",
       "difficulty": 4
     },
     {
@@ -2716,9 +3195,9 @@
       "tmdb_vote_average": 8.59,
       "tmdb_vote_count": 4208,
       "tmdb_popularity": 21.9078,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Band Of Brothers - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "3bBLyNdJfmxdJMtGd1BOzp",
       "difficulty": 5
     },
     {
@@ -2767,8 +3246,8 @@
       "tmdb_vote_average": 8.414,
       "tmdb_vote_count": 3275,
       "tmdb_popularity": 68.7173,
-      "song": "",
-      "song_author": "",
+      "song": "Sons Of Anarchy - This Life - Main Theme",
+      "song_author": "Geek Music",
       "spotify_id": "6lOLkQlxd6gmJbA9BkUXfB",
       "difficulty": 3
     },
@@ -2793,9 +3272,9 @@
       "tmdb_vote_average": 7.584,
       "tmdb_vote_count": 2587,
       "tmdb_popularity": 82.4124,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Homeland (Main Theme)",
+      "song_author": "TV Theme Song Maniacs",
+      "spotify_id": "29PxcHeJuTrHnXDsxzwrCb",
       "difficulty": 4
     },
     {
@@ -2841,9 +3320,9 @@
       "tmdb_vote_average": 8.009,
       "tmdb_vote_count": 3182,
       "tmdb_popularity": 33.8509,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "House Of Cards Main Title Theme",
+      "song_author": "Jeff Beal",
+      "spotify_id": "51pqlgzFBtqcRmb1CKdc56",
       "difficulty": 4
     },
     {
@@ -2867,9 +3346,9 @@
       "tmdb_vote_average": 6.958,
       "tmdb_vote_count": 594,
       "tmdb_popularity": 13.8587,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Main Title - From Hercules And The Circle Of Fire",
+      "song_author": "Joseph Loduca",
+      "spotify_id": "6RC0Q6IOiH0WluCoY57Y1A",
       "difficulty": 4
     },
     {
@@ -2918,9 +3397,9 @@
       "tmdb_vote_average": 7.793,
       "tmdb_vote_count": 2932,
       "tmdb_popularity": 17.9883,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "iZombie Main Theme (From \"iZombie\")",
+      "song_author": "Geek Music",
+      "spotify_id": "087zMjDDtlRCptGBAhu7d1",
       "difficulty": 5
     },
     {
@@ -2944,9 +3423,9 @@
       "tmdb_vote_average": 7.285,
       "tmdb_vote_count": 389,
       "tmdb_popularity": 54.7566,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "JAG: Main Theme from the TV Series",
+      "song_author": "Dominik Hauser",
+      "spotify_id": "2HaxC7oo8CiTsNVoNVpWyF",
       "difficulty": 5
     },
     {
@@ -2969,10 +3448,61 @@
       "tmdb_vote_average": 7.68,
       "tmdb_vote_count": 1801,
       "tmdb_popularity": 52.2,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Main Title Theme",
+      "song_author": "Ramin Djawadi",
+      "spotify_id": "5P5HkI7u3PVubFu7VpdV4E",
       "difficulty": 4
+    },
+    {
+      "id": "1399",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/3hDtRuwTfQQYRst3kjhvp4Cogjw.jpg",
+      "title": "Juego de tronos",
+      "original_title": "Game of Thrones",
+      "year": 2011,
+      "date": "2011-04-17",
+      "genres": [
+        10765,
+        18,
+        10759
+      ],
+      "director": "<unknown>",
+      "known_actor": "Peter Dinklage, Nikolaj Coster-Waldau",
+      "credits_selection_version": 2,
+      "score": 16.3784,
+      "tmdb_vote_average": 8.463,
+      "tmdb_vote_count": 27112,
+      "tmdb_popularity": 208.6307,
+      "song": "Main Title",
+      "song_author": "Ramin Djawadi",
+      "spotify_id": "2q6fxAvSpqXR4jx9Ne7RGz",
+      "difficulty": 1
+    },
+    {
+      "id": "1436",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/ie1quhMk09lDtvtAyQAHTu09R9Z.jpg",
+      "title": "Justified: La ley de Raylan",
+      "original_title": "Justified",
+      "year": 2010,
+      "date": "2010-03-16",
+      "genres": [
+        80,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Timothy Olyphant",
+      "credits_selection_version": 2,
+      "score": 13.1424,
+      "tmdb_vote_average": 8.0,
+      "tmdb_vote_count": 850,
+      "tmdb_popularity": 28.8527,
+      "song": "Long Hard Times To Come (Justified Main Title Theme) [feat. T.O.N.E-z]",
+      "song_author": "Gangstagrass, T.o.n.e-z",
+      "spotify_id": "7ef2ooGxlk0EzubPupK3ao",
+      "difficulty": 3
     },
     {
       "id": "70593",
@@ -3020,9 +3550,9 @@
       "tmdb_vote_average": 7.749,
       "tmdb_vote_count": 523,
       "tmdb_popularity": 14.5638,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Recess Main Theme (From \"Recess\")",
+      "song_author": "Geek Music",
+      "spotify_id": "6lkRdNECjDiLsOrel81MMU",
       "difficulty": 4
     },
     {
@@ -3045,10 +3575,35 @@
       "tmdb_vote_average": 8.232,
       "tmdb_vote_count": 19493,
       "tmdb_popularity": 38.0893,
-      "song": "",
-      "song_author": "",
+      "song": "Bella Ciao - Música Original de la Serie la Casa de Papel/ Money Heist",
+      "song_author": "Manu Pilas",
       "spotify_id": "3lWzVNe1yFZlkeBBzUuZYu",
       "difficulty": 3
+    },
+    {
+      "id": "14009",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/9eqmCtAY9d2WwafLBYXRKYepgeA.jpg",
+      "title": "La familia Addams",
+      "original_title": "The Addams Family",
+      "year": 1964,
+      "date": "1964-09-18",
+      "genres": [
+        35,
+        10751
+      ],
+      "director": "<unknown>",
+      "known_actor": "Carolyn Jones, John Astin",
+      "credits_selection_version": 2,
+      "score": 12.4218,
+      "tmdb_vote_average": 7.978,
+      "tmdb_vote_count": 440,
+      "tmdb_popularity": 14.8328,
+      "song": "Addams Family Theme",
+      "song_author": "HeathisHuman",
+      "spotify_id": "3ZqPSBYMFYVtCZv9Un5dc0",
+      "difficulty": 1
     },
     {
       "id": "2352",
@@ -3070,9 +3625,9 @@
       "tmdb_vote_average": 8.076,
       "tmdb_vote_count": 1297,
       "tmdb_popularity": 45.5565,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "The Nanny Named Fran (from \"The Nanny\" Television Series)",
+      "song_author": "Ann Hampton Callaway",
+      "spotify_id": "2raTb5B5n7dFhhRpefH9bL",
       "difficulty": 4
     },
     {
@@ -3095,10 +3650,33 @@
       "tmdb_vote_average": 7.0,
       "tmdb_vote_count": 812,
       "tmdb_popularity": 84.7662,
-      "song": "",
-      "song_author": "",
+      "song": "Patrulla Canina - Cancion de la Serie",
+      "song_author": "Pups Superstars",
       "spotify_id": "4N61sb12odJo93PFMdI8wr",
       "difficulty": 1
+    },
+    {
+      "id": "35338",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/ceoJyZgsHBaenUxhobHUA6mXXf0.jpg",
+      "title": "La que se avecina",
+      "original_title": "La que se avecina",
+      "year": 2007,
+      "date": "2007-04-22",
+      "genres": [
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "María Adánez, Carlos Areces",
+      "credits_selection_version": 2,
+      "score": 12.4881,
+      "tmdb_vote_average": 8.1,
+      "tmdb_vote_count": 286,
+      "tmdb_popularity": 18.3556,
+      "song": "",
+      "song_author": "",
+      "spotify_id": ""
     },
     {
       "id": "21510",
@@ -3170,9 +3748,9 @@
       "tmdb_vote_average": 7.893,
       "tmdb_vote_count": 1254,
       "tmdb_popularity": 63.1365,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Where You Lead - From \"Gilmore Girls\"",
+      "song_author": "TV Sounds Unlimited",
+      "spotify_id": "7xv83fHMzMjSqiYvUrzV7V",
       "difficulty": 4
     },
     {
@@ -3197,9 +3775,9 @@
       "tmdb_vote_average": 7.704,
       "tmdb_vote_count": 272,
       "tmdb_popularity": 18.6477,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Las Nuevas Aventuras De Winnie Pooh",
+      "song_author": "Coros - Winnie the Pooh",
+      "spotify_id": "2H21pOMz5tjhPLD19nA2MU",
       "difficulty": 3
     },
     {
@@ -3224,11 +3802,39 @@
       "tmdb_vote_average": 7.8,
       "tmdb_vote_count": 838,
       "tmdb_popularity": 38.22,
-      "song": "",
-      "song_author": "",
+      "song": "Teenage Mutant Ninja Turtles Cartoon Opening Theme (1987)",
+      "song_author": "Teenage Mutant Ninja Turtles",
       "spotify_id": "4QpB8RyVWCAcZ5bWRk14bo",
       "difficulty": 3,
       "relevance": 3
+    },
+    {
+      "id": "51817",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/1HhyYDWo0x8H3VaRh6mg5Tm240T.jpg",
+      "title": "Las Tortugas Ninja",
+      "original_title": "Teenage Mutant Ninja Turtles",
+      "year": 2012,
+      "date": "2012-09-28",
+      "genres": [
+        10759,
+        10762,
+        16,
+        10765,
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Seth Green, Sean Astin",
+      "credits_selection_version": 2,
+      "score": 13.6674,
+      "tmdb_vote_average": 8.324,
+      "tmdb_vote_count": 791,
+      "tmdb_popularity": 41.6367,
+      "song": "Teenage Mutant Ninja Turtles Theme",
+      "song_author": "Ninja Turtles",
+      "spotify_id": "696lO3iFW994LRIQlH104Y",
+      "difficulty": 2
     },
     {
       "id": "549",
@@ -3250,35 +3856,9 @@
       "tmdb_vote_average": 7.306,
       "tmdb_vote_count": 692,
       "tmdb_popularity": 213.8012,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 4
-    },
-    {
-      "id": "2734",
-      "tmdb_type": "tv",
-      "type": 2,
-      "poster": "https://image.tmdb.org/t/p/w500/kvo558UKEhp8v3JoRGCSIx3Xxab.jpg",
-      "title": "Ley y orden: Unidad de Víctimas Especiales",
-      "original_title": "Law & Order: Special Victims Unit",
-      "year": 1999,
-      "date": "1999-09-20",
-      "genres": [
-        80,
-        18,
-        9648
-      ],
-      "director": "<unknown>",
-      "known_actor": "Mariska Hargitay",
-      "credits_selection_version": 2,
-      "score": 15.2504,
-      "tmdb_vote_average": 7.951,
-      "tmdb_vote_count": 4253,
-      "tmdb_popularity": 278.9528,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Law & Order - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "4UZ8C40a3JtzOsU4AjEjYY",
       "difficulty": 4
     },
     {
@@ -3303,9 +3883,9 @@
       "tmdb_vote_average": 6.9,
       "tmdb_vote_count": 494,
       "tmdb_popularity": 69.4789,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Lois & Clark - The New Adventures of Superman",
+      "song_author": "Super Heros Invasion",
+      "spotify_id": "3ZltU8cC6X3S0JA3HmGjuW",
       "difficulty": 3
     },
     {
@@ -3328,9 +3908,9 @@
       "tmdb_vote_average": 8.171,
       "tmdb_vote_count": 12427,
       "tmdb_popularity": 36.0886,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Loki Green Theme",
+      "song_author": "Natalie Holt",
+      "spotify_id": "5T7DUEeAj0hkMLTzIlDCRz",
       "difficulty": 4
     },
     {
@@ -3355,9 +3935,9 @@
       "tmdb_vote_average": 7.882,
       "tmdb_vote_count": 8650,
       "tmdb_popularity": 57.3434,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "The 100 - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "5WT3geWRDrCv6JpEFyRI8g",
       "difficulty": 3
     },
     {
@@ -3379,9 +3959,9 @@
       "tmdb_vote_average": 8.1,
       "tmdb_vote_count": 3324,
       "tmdb_popularity": 52.1297,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Bridgerton Main Title (From Netflix's \"Bridgerton\") - Extended Version",
+      "song_author": "John G. Music",
+      "spotify_id": "2v2FFBTgyoNOwav1WWdjJD",
       "difficulty": 4
     },
     {
@@ -3406,9 +3986,36 @@
       "tmdb_vote_average": 8.475,
       "tmdb_vote_count": 1425,
       "tmdb_popularity": 20.704,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Los guardianes del universo (From \"Saint Seiya - Los caballeros del zodiaco\")",
+      "song_author": "Power Up Orchestra",
+      "spotify_id": "0pxtCOiuWUETc2x45SGPbC",
+      "difficulty": 3
+    },
+    {
+      "id": "34376",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/o18qCrSlgQXoRIDwCRiIz9IPyqY.jpg",
+      "title": "Los hombres de Paco",
+      "original_title": "Los hombres de Paco",
+      "year": 2005,
+      "date": "2005-10-09",
+      "genres": [
+        18,
+        35,
+        10759,
+        80
+      ],
+      "director": "<unknown>",
+      "known_actor": "Paco Tous, Carlos Santos",
+      "credits_selection_version": 2,
+      "score": 11.8236,
+      "tmdb_vote_average": 7.9,
+      "tmdb_vote_count": 206,
+      "tmdb_popularity": 10.7964,
+      "song": "Nada que perder",
+      "song_author": "Pignoise",
+      "spotify_id": "0YSaKC66FGCWLxM9SoQA1f",
       "difficulty": 3
     },
     {
@@ -3430,8 +4037,8 @@
       "tmdb_vote_average": 8.163,
       "tmdb_vote_count": 1623,
       "tmdb_popularity": 11.838,
-      "song": "",
-      "song_author": "",
+      "song": "The I.T. Crowd Theme",
+      "song_author": "TV Theme Tune Factory",
       "spotify_id": "59wKplev4Acm62H2I7Vixk",
       "difficulty": 2
     },
@@ -3456,9 +4063,9 @@
       "tmdb_vote_average": 7.373,
       "tmdb_vote_count": 421,
       "tmdb_popularity": 26.588,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Princes Of The Universe (From ''Highlander'')",
+      "song_author": "Geek Music",
+      "spotify_id": "3cpX83jBOpUGJyG3b3crdE",
       "difficulty": 4
     },
     {
@@ -3536,10 +4143,36 @@
       "tmdb_vote_average": 7.001,
       "tmdb_vote_count": 571,
       "tmdb_popularity": 30.4553,
-      "song": "",
-      "song_author": "",
+      "song": "La Canción de los Pitufos",
+      "song_author": "Grupo Chis",
       "spotify_id": "6UcD1vLgiUYDB4pvmPYdg0",
       "difficulty": 1
+    },
+    {
+      "id": "7283",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/w9hPecVLyCkbnJLLdjFu67URBZP.jpg",
+      "title": "Los Serrano",
+      "original_title": "Los Serrano",
+      "year": 2003,
+      "date": "2003-04-22",
+      "genres": [
+        35,
+        10751,
+        18
+      ],
+      "director": "Mar Olid, Arantxa Écija, Begoña Álvarez Rojas",
+      "known_actor": "Antonio Resines",
+      "credits_selection_version": 2,
+      "score": 9.8142,
+      "tmdb_vote_average": 6.667,
+      "tmdb_vote_count": 51,
+      "tmdb_popularity": 7.9972,
+      "song": "Uno más uno son 7",
+      "song_author": "Fran Perea",
+      "spotify_id": "3Af6XfS90PAZaC4Q2AjPtg",
+      "difficulty": 3
     },
     {
       "id": "456",
@@ -3616,6 +4249,32 @@
       "song_author": "Geek Music",
       "spotify_id": "4TWklwhvcqRETcWTbY53U0",
       "difficulty": 3
+    },
+    {
+      "id": "1426",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/hDxOMX8zzH1FiqKWVBzNaYGBkle.jpg",
+      "title": "Luther",
+      "original_title": "Luther",
+      "year": 2010,
+      "date": "2010-05-04",
+      "genres": [
+        80,
+        18,
+        9648
+      ],
+      "director": "<unknown>",
+      "known_actor": "Idris Elba, Hermione Norris",
+      "credits_selection_version": 2,
+      "score": 12.7317,
+      "tmdb_vote_average": 7.856,
+      "tmdb_vote_count": 1206,
+      "tmdb_popularity": 14.7033,
+      "song": "Luther - The TV Theme",
+      "song_author": "TV Themes",
+      "spotify_id": "2bgiu4nJAjFNO0gEXqJaZL",
+      "difficulty": 4
     },
     {
       "id": "2875",
@@ -3713,9 +4372,9 @@
       "tmdb_vote_average": 7.935,
       "tmdb_vote_count": 169,
       "tmdb_popularity": 8.5871,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Sledge Hammer! (Main Theme)",
+      "song_author": "The Best Music from TV Series",
+      "spotify_id": "1Likq7kGfgwjKnWunrEX9P",
       "difficulty": 4
     },
     {
@@ -3739,9 +4398,34 @@
       "tmdb_vote_average": 8.2,
       "tmdb_vote_count": 5196,
       "tmdb_popularity": 45.985,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Main Title",
+      "song_author": "John Paesano, Braden Kimball",
+      "spotify_id": "4t20umh0eSuYstasrSl2HV",
+      "difficulty": 4
+    },
+    {
+      "id": "38472",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/b3EVT7sSX8Y8L3OekYWyKLRS1Jt.jpg",
+      "title": "Marvel - Jessica Jones",
+      "original_title": "Marvel's Jessica Jones",
+      "year": 2015,
+      "date": "2015-11-20",
+      "genres": [
+        10765,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Krysten Ritter",
+      "credits_selection_version": 2,
+      "score": 12.8718,
+      "tmdb_vote_average": 7.479,
+      "tmdb_vote_count": 2614,
+      "tmdb_popularity": 19.7446,
+      "song": "Jessica Jones - Main Titles Theme (From \"Marvel's Jessica Jones\")",
+      "song_author": "Cinematic Legacy",
+      "spotify_id": "3bhC9N30V4jwL0ZzJCTga7",
       "difficulty": 4
     },
     {
@@ -3765,9 +4449,9 @@
       "tmdb_vote_average": 8.147,
       "tmdb_vote_count": 3169,
       "tmdb_popularity": 46.0988,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "The Punisher Main Title",
+      "song_author": "Tyler Bates",
+      "spotify_id": "0rSJtqCSAkhKORRpJlk7pL",
       "difficulty": 4
     },
     {
@@ -3840,9 +4524,9 @@
       "tmdb_vote_average": 7.935,
       "tmdb_vote_count": 632,
       "tmdb_popularity": 39.5675,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Mayor Of Kingstown Main Titles",
+      "song_author": "Andrew Lockington",
+      "spotify_id": "0RKjWhhoA3trncpuEUs02f",
       "difficulty": 4
     },
     {
@@ -3864,9 +4548,9 @@
       "tmdb_vote_average": 7.7,
       "tmdb_vote_count": 1128,
       "tmdb_popularity": 23.2291,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "What Goes Around",
+      "song_author": "Nescobar-a-lop-lop",
+      "spotify_id": "0SGUMc4VC0qoG9cUCY610D",
       "difficulty": 4
     },
     {
@@ -3890,9 +4574,9 @@
       "tmdb_vote_average": 8.3,
       "tmdb_vote_count": 4100,
       "tmdb_popularity": 174.6563,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Criminal Minds (Main Theme from the TV Series) [Short Version]",
+      "song_author": "Música de Series",
+      "spotify_id": "6NVRqexm5iiMh8eitaMgmf",
       "difficulty": 4
     },
     {
@@ -3915,9 +4599,35 @@
       "tmdb_vote_average": 8.126,
       "tmdb_vote_count": 2979,
       "tmdb_popularity": 20.6897,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Main Titles - Mindhunter",
+      "song_author": "Jason Hill",
+      "spotify_id": "184cjXXmt4CpWXwLfpsEvX",
+      "difficulty": 4
+    },
+    {
+      "id": "31295",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/pkGPHO7WxViedkOm6Xy1aWSS36l.jpg",
+      "title": "Misfits",
+      "original_title": "Misfits",
+      "year": 2009,
+      "date": "2009-11-12",
+      "genres": [
+        10765,
+        18,
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Joseph Gilgun",
+      "credits_selection_version": 2,
+      "score": 12.3882,
+      "tmdb_vote_average": 7.602,
+      "tmdb_vote_count": 1024,
+      "tmdb_popularity": 14.2644,
+      "song": "Echoes",
+      "song_author": "The Rapture",
+      "spotify_id": "7wg5h9uqPvRngy5WUQKlAs",
       "difficulty": 4
     },
     {
@@ -3941,8 +4651,8 @@
       "tmdb_vote_average": 8.345,
       "tmdb_vote_count": 10582,
       "tmdb_popularity": 47.9417,
-      "song": "",
-      "song_author": "",
+      "song": "Wednesday Main Titles",
+      "song_author": "Danny Elfman",
       "spotify_id": "3dd9uXh41vmFLO3UvqLJL6",
       "difficulty": 3
     },
@@ -4019,9 +4729,9 @@
       "tmdb_vote_average": 8.5,
       "tmdb_vote_count": 786,
       "tmdb_popularity": 51.8882,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Grain Opening Theme - From \"Monster\"",
+      "song_author": "ReScore",
+      "spotify_id": "503DKlm3F4GxmojZOQxUez",
       "difficulty": 4
     },
     {
@@ -4126,6 +4836,31 @@
       "difficulty": 1
     },
     {
+      "id": "75942",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/v7LG4wmaXg093bFRmNjh0rjaR0Q.jpg",
+      "title": "Médico de familia",
+      "original_title": "Médico de familia",
+      "year": 1995,
+      "date": "1995-09-15",
+      "genres": [
+        10751,
+        18,
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Aaron Guerrero, Marieta Bielsa",
+      "credits_selection_version": 2,
+      "score": 7.8544,
+      "tmdb_vote_average": 5.647,
+      "tmdb_vote_count": 17,
+      "tmdb_popularity": 3.3129,
+      "song": "",
+      "song_author": "",
+      "spotify_id": ""
+    },
+    {
       "id": "63351",
       "tmdb_type": "tv",
       "type": 2,
@@ -4171,35 +4906,9 @@
       "tmdb_vote_average": 8.364,
       "tmdb_vote_count": 6010,
       "tmdb_popularity": 72.3613,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 2
-    },
-    {
-      "id": "31910",
-      "tmdb_type": "tv",
-      "type": 2,
-      "poster": "https://image.tmdb.org/t/p/w500/ews8shcDbRG3tY33dF0jClNvgIK.jpg",
-      "title": "Naruto Shippuden",
-      "original_title": "ナルト 疾風伝",
-      "year": 2007,
-      "date": "2007-02-15",
-      "genres": [
-        16,
-        10759,
-        10765
-      ],
-      "director": "<unknown>",
-      "known_actor": "Junko Takeuchi",
-      "credits_selection_version": 2,
-      "score": 15.2013,
-      "tmdb_vote_average": 8.5,
-      "tmdb_vote_count": 8670,
-      "tmdb_popularity": 68.5315,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "遥か彼方",
+      "song_author": "ASIAN KUNG-FU GENERATION",
+      "spotify_id": "5ORPYXJKlpHWIdceavSGrL",
       "difficulty": 2
     },
     {
@@ -4223,10 +4932,36 @@
       "tmdb_vote_average": 7.619,
       "tmdb_vote_count": 2522,
       "tmdb_popularity": 184.0419,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Ncis Theme",
+      "song_author": "Numeriklab",
+      "spotify_id": "4c1LnEyVW8evh46XomFZ7u",
       "difficulty": 4
+    },
+    {
+      "id": "88329",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/3ZcJetFxd8fwJ1I5xsLHCMTAKQo.jpg",
+      "title": "Ojo de Halcón",
+      "original_title": "Hawkeye",
+      "year": 2021,
+      "date": "2021-11-24",
+      "genres": [
+        18,
+        35,
+        10759
+      ],
+      "director": "<unknown>",
+      "known_actor": "Jeremy Renner",
+      "credits_selection_version": 2,
+      "score": 13.4022,
+      "tmdb_vote_average": 7.788,
+      "tmdb_vote_count": 3720,
+      "tmdb_popularity": 22.0327,
+      "song": "Hawkeye Main Theme (From \"Hawkeye\")",
+      "song_author": "Geek Music",
+      "spotify_id": "6m5XvzpWgKcIXmaKcrAevq",
+      "difficulty": 5
     },
     {
       "id": "37854",
@@ -4249,9 +4984,9 @@
       "tmdb_vote_average": 8.74,
       "tmdb_vote_count": 5367,
       "tmdb_popularity": 52.3723,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "We Are (One Piece)",
+      "song_author": "Miura Jam",
+      "spotify_id": "74zQNNfQI2sEsreJCJtndS",
       "difficulty": 3
     },
     {
@@ -4276,9 +5011,9 @@
       "tmdb_vote_average": 8.4,
       "tmdb_vote_count": 4136,
       "tmdb_popularity": 35.2098,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "THE HERO !!: Ikareru Kobushi ni Hi o Tsukero",
+      "song_author": "JAM Project",
+      "spotify_id": "6ZlyzUimBAJp4XDqKKSrlk",
       "difficulty": 3
     },
     {
@@ -4302,9 +5037,34 @@
       "tmdb_vote_average": 7.644,
       "tmdb_vote_count": 2821,
       "tmdb_popularity": 39.3384,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "You've Got Time",
+      "song_author": "Regina Spektor",
+      "spotify_id": "7n9Pg642sazJPSwNh7AZvN",
+      "difficulty": 4
+    },
+    {
+      "id": "56296",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/tjFYkWMafg71sihs1aa7IDx17aS.jpg",
+      "title": "Orphan Black",
+      "original_title": "Orphan Black",
+      "year": 2013,
+      "date": "2013-03-30",
+      "genres": [
+        18,
+        10765
+      ],
+      "director": "<unknown>",
+      "known_actor": "Tatiana Maslany",
+      "credits_selection_version": 2,
+      "score": 12.8993,
+      "tmdb_vote_average": 7.799,
+      "tmdb_vote_count": 1435,
+      "tmdb_popularity": 18.7432,
+      "song": "Orphan Black Main Theme (From \"Orphan Black\")",
+      "song_author": "Geek Music",
+      "spotify_id": "29YClg9Al6eLG1tKseM8BG",
       "difficulty": 4
     },
     {
@@ -4352,9 +5112,9 @@
       "tmdb_vote_average": 8.1,
       "tmdb_vote_count": 843,
       "tmdb_popularity": 28.1991,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "OZ - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "4NJ2pn0RknmI6s7xgLXsZp",
       "difficulty": 4
     },
     {
@@ -4426,10 +5186,34 @@
       "tmdb_vote_average": 8.0,
       "tmdb_vote_count": 1834,
       "tmdb_popularity": 30.2221,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Parks And Recreation - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "2dJuJ1e14nf47qtG5CYrr4",
       "difficulty": 4
+    },
+    {
+      "id": "11250",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/91UV7pNcDPhIzJl7EuK36sK5vRG.jpg",
+      "title": "Pasión de gavilanes",
+      "original_title": "Pasión de gavilanes",
+      "year": 2003,
+      "date": "2003-10-21",
+      "genres": [
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Mario Cimarro",
+      "credits_selection_version": 2,
+      "score": 12.8329,
+      "tmdb_vote_average": 7.668,
+      "tmdb_vote_count": 2112,
+      "tmdb_popularity": 15.8519,
+      "song": "Quién Es Ese Hombre",
+      "song_author": "Las Chicas Malas",
+      "spotify_id": "3pec0RSvz3tRwgHmDojW9v",
+      "difficulty": 1
     },
     {
       "id": "60574",
@@ -4457,6 +5241,59 @@
       "difficulty": 3
     },
     {
+      "id": "54671",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/hQSdrXBYTbLGHYDIseHkBOPXTgL.jpg",
+      "title": "Penny Dreadful",
+      "original_title": "Penny Dreadful",
+      "year": 2014,
+      "date": "2014-05-11",
+      "genres": [
+        10765,
+        18,
+        9648,
+        10759
+      ],
+      "director": "<unknown>",
+      "known_actor": "Eva Green",
+      "credits_selection_version": 2,
+      "score": 12.6539,
+      "tmdb_vote_average": 7.806,
+      "tmdb_vote_count": 1517,
+      "tmdb_popularity": 11.9148,
+      "song": "Penny Dreadful Main Theme (From \"Penny Dreadful\")",
+      "song_author": "Geek Music",
+      "spotify_id": "7fSCfqRs1ck6tpsOCQqSCf",
+      "difficulty": 4
+    },
+    {
+      "id": "4607",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/47RazdqbtMmDxKHskObbHkc2D3o.jpg",
+      "title": "Perdidos",
+      "original_title": "Lost",
+      "year": 2004,
+      "date": "2004-09-22",
+      "genres": [
+        9648,
+        10759,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Matthew Fox, Evangeline Lilly",
+      "credits_selection_version": 2,
+      "score": 14.6457,
+      "tmdb_vote_average": 8.0,
+      "tmdb_vote_count": 5102,
+      "tmdb_popularity": 89.8982,
+      "song": "LOST: Main Theme - Live from National Concert Hall, Dublin / June 2019",
+      "song_author": "Michael Giacchino",
+      "spotify_id": "5XANGIFf8B8BsFRBTcnBJw",
+      "difficulty": 3
+    },
+    {
       "id": "60572",
       "tmdb_type": "tv",
       "type": 2,
@@ -4477,9 +5314,9 @@
       "tmdb_vote_average": 7.987,
       "tmdb_vote_count": 2195,
       "tmdb_popularity": 81.1185,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Tema de Pokémon",
+      "song_author": "Pokémon",
+      "spotify_id": "5WZd9ofTnuqsjHgHFQm5JR",
       "difficulty": 2
     },
     {
@@ -4554,10 +5391,34 @@
       "tmdb_vote_average": 9.3,
       "tmdb_vote_count": 300,
       "tmdb_popularity": 164.7023,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Dutton Ranch Main Title",
+      "song_author": "Brian Tyler, Breton Vivian",
+      "spotify_id": "4AOUIaF8uicvk3rWKxI6Fc",
       "difficulty": 4
+    },
+    {
+      "id": "1423",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/cwJ6nLNvX62By0yoLYWFhRelPkF.jpg",
+      "title": "Ray Donovan",
+      "original_title": "Ray Donovan",
+      "year": 2013,
+      "date": "2013-06-30",
+      "genres": [
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Liev Schreiber",
+      "credits_selection_version": 2,
+      "score": 12.6817,
+      "tmdb_vote_average": 7.497,
+      "tmdb_vote_count": 834,
+      "tmdb_popularity": 31.2614,
+      "song": "Previously On Ray Donovan",
+      "song_author": "Marcelo Zarvos",
+      "spotify_id": "4AxhfzCLqdRXcGIH0uNiYX",
+      "difficulty": 5
     },
     {
       "id": "108978",
@@ -4605,9 +5466,9 @@
       "tmdb_vote_average": 8.411,
       "tmdb_vote_count": 5198,
       "tmdb_popularity": 25.8648,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Rebelde",
+      "song_author": "RBD, Anahí, Dulce María, Maite Perroni, Christian Chávez, Christopher von Uckermann, Alfonso Herrera",
+      "spotify_id": "56tOMi4N980gmsdUoyaLb3",
       "difficulty": 4
     },
     {
@@ -4664,6 +5525,30 @@
       "difficulty": 5
     },
     {
+      "id": "4608",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/rY4ZbKLbd5OUisdykcJCch5WXvx.jpg",
+      "title": "Rockefeller Plaza",
+      "original_title": "30 Rock",
+      "year": 2006,
+      "date": "2006-10-11",
+      "genres": [
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Tina Fey, Alec Baldwin",
+      "credits_selection_version": 2,
+      "score": 12.7461,
+      "tmdb_vote_average": 7.477,
+      "tmdb_vote_count": 812,
+      "tmdb_popularity": 36.3844,
+      "song": "Page Off Intro / Theme From 30 Rock / Kenneth Chokes - Medley",
+      "song_author": "Jeff Richmond",
+      "spotify_id": "2IR5pCM1qILwLgJYmsZLI0",
+      "difficulty": 3
+    },
+    {
       "id": "1891",
       "tmdb_type": "tv",
       "type": 2,
@@ -4683,9 +5568,9 @@
       "tmdb_vote_average": 8.235,
       "tmdb_vote_count": 1500,
       "tmdb_popularity": 17.8333,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Rome (Main Title Theme)",
+      "song_author": "Jeff Beal",
+      "spotify_id": "1tMH8Bp3RbZ44AJi5XuVX6",
       "difficulty": 4
     },
     {
@@ -4709,9 +5594,9 @@
       "tmdb_vote_average": 8.0,
       "tmdb_vote_count": 1575,
       "tmdb_popularity": 142.4115,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "S.W.A.T. Theme (Los Hombres de Harrelson)",
+      "song_author": "Starlight Orchestra",
+      "spotify_id": "3HCLUEeWCE65BnbT29VPwo",
       "difficulty": 4
     },
     {
@@ -4760,37 +5645,10 @@
       "tmdb_vote_average": 7.816,
       "tmdb_vote_count": 712,
       "tmdb_popularity": 8.8362,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Saved By The Bell - The TV Theme",
+      "song_author": "TV Themes",
+      "spotify_id": "4FfjNhtXk3ZnuoRLP1v0la",
       "difficulty": 4
-    },
-    {
-      "id": "18123",
-      "tmdb_type": "tv",
-      "type": 2,
-      "poster": "https://image.tmdb.org/t/p/w500/gUcaxw7wocfn1FjgiVb5P7aKNqn.jpg",
-      "title": "Scooby-Doo! Misterios, S. A.",
-      "original_title": "Scooby-Doo! Mystery Incorporated",
-      "year": 2010,
-      "date": "2010-07-12",
-      "genres": [
-        16,
-        9648,
-        10751,
-        10765
-      ],
-      "director": "<unknown>",
-      "known_actor": "Frank Welker, Grey DeLisle",
-      "credits_selection_version": 2,
-      "score": 13.5274,
-      "tmdb_vote_average": 8.228,
-      "tmdb_vote_count": 1118,
-      "tmdb_popularity": 30.6507,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 2
     },
     {
       "id": "60797",
@@ -4837,8 +5695,8 @@
       "tmdb_vote_average": 8.169,
       "tmdb_vote_count": 127,
       "tmdb_popularity": 61.2916,
-      "song": "",
-      "song_author": "",
+      "song": "Scrubs (Main Theme)",
+      "song_author": "The Best Music from TV Series",
       "spotify_id": "7qXowaGkBRxCriBFoJuVmz",
       "difficulty": 3
     },
@@ -4863,35 +5721,9 @@
       "tmdb_vote_average": 7.5,
       "tmdb_vote_count": 447,
       "tmdb_popularity": 51.7873,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 4
-    },
-    {
-      "id": "71789",
-      "tmdb_type": "tv",
-      "type": 2,
-      "poster": "https://image.tmdb.org/t/p/w500/6iSnec83UEMgLOXAtGYwaVNHLjR.jpg",
-      "title": "SEAL Team",
-      "original_title": "SEAL Team",
-      "year": 2017,
-      "date": "2017-09-27",
-      "genres": [
-        10759,
-        18,
-        10768
-      ],
-      "director": "<unknown>",
-      "known_actor": "David Boreanaz, A.J. Buckley",
-      "credits_selection_version": 2,
-      "score": 13.7708,
-      "tmdb_vote_average": 8.0,
-      "tmdb_vote_count": 1630,
-      "tmdb_popularity": 49.7632,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Murder, She Wrote Main Theme (From \"Murder, She Wrote\")",
+      "song_author": "Geek Music",
+      "spotify_id": "1HXr9XcV4LePDrsXrrvlsn",
       "difficulty": 4
     },
     {
@@ -4943,6 +5775,31 @@
       "difficulty": 2
     },
     {
+      "id": "61664",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/kmyvlQ9QKzgdZY31rXaUlgCnzrB.jpg",
+      "title": "Sense8",
+      "original_title": "Sense8",
+      "year": 2015,
+      "date": "2015-06-05",
+      "genres": [
+        10765,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Miguel Ángel Silvestre, Max Riemelt",
+      "credits_selection_version": 2,
+      "score": 12.8355,
+      "tmdb_vote_average": 7.72,
+      "tmdb_vote_count": 1853,
+      "tmdb_popularity": 16.046,
+      "song": "Sense 8 - The Main Title Theme",
+      "song_author": "TV Themes",
+      "spotify_id": "3epSc3Hc0vBbQkOEEfhCmR",
+      "difficulty": 5
+    },
+    {
       "id": "81356",
       "tmdb_type": "tv",
       "type": 2,
@@ -4962,10 +5819,10 @@
       "tmdb_vote_average": 8.204,
       "tmdb_vote_count": 7866,
       "tmdb_popularity": 47.0192,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 2
+      "song": "Love You So Bad",
+      "song_author": "Ezra Furman",
+      "spotify_id": "5141H4ftZMaTJIuMOhJ5J3",
+      "difficulty": 4
     },
     {
       "id": "105",
@@ -5038,9 +5895,9 @@
       "tmdb_vote_average": 8.508,
       "tmdb_vote_count": 6456,
       "tmdb_popularity": 27.6424,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Opening Titles",
+      "song_author": "David Arnold, Michael Price",
+      "spotify_id": "0Qc4gkocDgNcVYrx24IfFA",
       "difficulty": 4
     },
     {
@@ -5088,9 +5945,9 @@
       "tmdb_vote_average": 8.4,
       "tmdb_vote_count": 1766,
       "tmdb_popularity": 20.1295,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Main Title (Shōgun)",
+      "song_author": "Atticus Ross, Leopold Ross, Nick Chuba",
+      "spotify_id": "2vrJwQYPVOhmfdM2glDVOT",
       "difficulty": 4
     },
     {
@@ -5166,9 +6023,9 @@
       "tmdb_vote_average": 8.448,
       "tmdb_vote_count": 2200,
       "tmdb_popularity": 26.2146,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Only Murders In The Main Building Main Theme (From \"Only Murders In The Main Building\")",
+      "song_author": "Geek Music",
+      "spotify_id": "4JwvpcoBnPwljhxpPCoxPd",
       "difficulty": 5
     },
     {
@@ -5192,9 +6049,9 @@
       "tmdb_vote_average": 8.668,
       "tmdb_vote_count": 1804,
       "tmdb_popularity": 59.3638,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "LEveL \"Solo Leveling Opening\" - OrCH Version",
+      "song_author": "AVIAND",
+      "spotify_id": "7MxWzHflHfPadZOTjf5Ydc",
       "difficulty": 4
     },
     {
@@ -5241,9 +6098,9 @@
       "tmdb_vote_average": 8.028,
       "tmdb_vote_count": 2955,
       "tmdb_popularity": 72.7946,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Main Titles - From \"Spartacus\"",
+      "song_author": "The City of Prague Philharmonic Orchestra",
+      "spotify_id": "2Nvb8MNDzydP6fPXuIA8Qj",
       "difficulty": 4
     },
     {
@@ -5267,9 +6124,9 @@
       "tmdb_vote_average": 8.511,
       "tmdb_vote_count": 584,
       "tmdb_popularity": 86.4594,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Saving Grace - From the Prime Original Series Spider-Noir",
+      "song_author": "KIRBY",
+      "spotify_id": "6PMlmHyzLWbsAWxQT0hSJZ",
       "difficulty": 4
     },
     {
@@ -5292,9 +6149,9 @@
       "tmdb_vote_average": 8.001,
       "tmdb_vote_count": 1495,
       "tmdb_popularity": 48.2811,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Star Trek: Main Theme - From \"Star Trek\"",
+      "song_author": "Alexander Courage, Fred Steiner, Royal Philharmonic Orchestra",
+      "spotify_id": "1LaQ3RGV5wfIGEAsdUlkWA",
       "difficulty": 3
     },
     {
@@ -5317,9 +6174,9 @@
       "tmdb_vote_average": 8.268,
       "tmdb_vote_count": 1831,
       "tmdb_popularity": 92.3977,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Stargate Sg-1: Main Title",
+      "song_author": "Original Soundtrack",
+      "spotify_id": "2tu5afwDKnND5TVJvBSPe5",
       "difficulty": 3
     },
     {
@@ -5368,9 +6225,9 @@
       "tmdb_vote_average": 8.292,
       "tmdb_vote_count": 1658,
       "tmdb_popularity": 33.7832,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Succession (Main Title Theme)",
+      "song_author": "Nicholas Britell",
+      "spotify_id": "0bSHwuTOZVJUXWT03H9oD2",
       "difficulty": 4
     },
     {
@@ -5417,9 +6274,9 @@
       "tmdb_vote_average": 8.342,
       "tmdb_vote_count": 2392,
       "tmdb_popularity": 32.7208,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Ted Lasso Theme",
+      "song_author": "Marcus Mumford, Tom Howe",
+      "spotify_id": "0OvmDL6jiAksoqs01EAq9A",
       "difficulty": 4
     },
     {
@@ -5519,36 +6376,10 @@
       "tmdb_vote_average": 8.185,
       "tmdb_vote_count": 2349,
       "tmdb_popularity": 93.5665,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "The Crown Main Title",
+      "song_author": "Hans Zimmer",
+      "spotify_id": "21u2gUlh5Iun4ogGGqKVum",
       "difficulty": 3
-    },
-    {
-      "id": "74577",
-      "tmdb_type": "tv",
-      "type": 2,
-      "poster": "https://image.tmdb.org/t/p/w500/f1OV9xEJCZVYcYSDRr5xOD8NJw3.jpg",
-      "title": "The End of the F***ing World",
-      "original_title": "The End of the F***ing World",
-      "year": 2017,
-      "date": "2017-10-24",
-      "genres": [
-        35,
-        18,
-        80
-      ],
-      "director": "<unknown>",
-      "known_actor": "Alex Lawther, Naomi Ackie",
-      "credits_selection_version": 2,
-      "score": 13.0047,
-      "tmdb_vote_average": 8.0,
-      "tmdb_vote_count": 3582,
-      "tmdb_popularity": 8.2679,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 4
     },
     {
       "id": "63639",
@@ -5571,34 +6402,9 @@
       "tmdb_vote_average": 8.065,
       "tmdb_vote_count": 2829,
       "tmdb_popularity": 53.785,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 4
-    },
-    {
-      "id": "60735",
-      "tmdb_type": "tv",
-      "type": 2,
-      "poster": "https://image.tmdb.org/t/p/w500/7ci4qqkBJorLxSBwTj28vwh0bU.jpg",
-      "title": "The Flash",
-      "original_title": "The Flash",
-      "year": 2014,
-      "date": "2014-10-07",
-      "genres": [
-        18,
-        10765
-      ],
-      "director": "<unknown>",
-      "known_actor": "Grant Gustin, Danielle Panabaker",
-      "credits_selection_version": 2,
-      "score": 14.8986,
-      "tmdb_vote_average": 7.758,
-      "tmdb_vote_count": 11633,
-      "tmdb_popularity": 111.1824,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "The Expanse - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "4ZVAVOKYkdqPfn2QVLQXO8",
       "difficulty": 4
     },
     {
@@ -5622,9 +6428,9 @@
       "tmdb_vote_average": 7.432,
       "tmdb_vote_count": 524,
       "tmdb_popularity": 9.6389,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "The Flash TV Series Theme (1990)",
+      "song_author": "Danny Elfman",
+      "spotify_id": "2YrJIx7c6aywjBxlhwRgPE",
       "difficulty": 4
     },
     {
@@ -5671,9 +6477,9 @@
       "tmdb_vote_average": 8.0,
       "tmdb_vote_count": 1970,
       "tmdb_popularity": 17.9506,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "https://open.spotify.com/intl-es/album/2RtBpvIErz1mquQ1L114Wu",
+      "song": "The Good Place - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "0VSqi18Fanu3qQq3g0PIoX",
       "difficulty": 3
     },
     {
@@ -5695,10 +6501,35 @@
       "tmdb_vote_average": 7.595,
       "tmdb_vote_count": 671,
       "tmdb_popularity": 81.3247,
+      "song": "The Good Wife (Theme)",
+      "song_author": "David Buckley",
+      "spotify_id": "3YJfNbvAQZK4TDmgdNr1bp",
+      "difficulty": 4
+    },
+    {
+      "id": "34415",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/3yiwAUNGn1rsPSVmFgVwPVJFtYf.jpg",
+      "title": "The Killing",
+      "original_title": "The Killing",
+      "year": 2011,
+      "date": "2011-04-03",
+      "genres": [
+        18,
+        80,
+        9648
+      ],
+      "director": "<unknown>",
+      "known_actor": "Mireille Enos, Joel Kinnaman",
+      "credits_selection_version": 2,
+      "score": 12.6683,
+      "tmdb_vote_average": 7.824,
+      "tmdb_vote_count": 874,
+      "tmdb_popularity": 17.5429,
       "song": "",
       "song_author": "",
-      "spotify_id": "",
-      "difficulty": 4
+      "spotify_id": ""
     },
     {
       "id": "63333",
@@ -5795,10 +6626,33 @@
       "tmdb_vote_average": 8.409,
       "tmdb_vote_count": 10998,
       "tmdb_popularity": 55.4842,
+      "song": "The Mandalorian",
+      "song_author": "Ludwig Göransson",
+      "spotify_id": "6tJFtthY0rI1x06qb8NjK0",
+      "difficulty": 3
+    },
+    {
+      "id": "1422",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/u6FluiFx3ocVS0MgZszfpPKXT2p.jpg",
+      "title": "The Middle",
+      "original_title": "The Middle",
+      "year": 2009,
+      "date": "2009-09-30",
+      "genres": [
+        35
+      ],
+      "director": "<unknown>",
+      "known_actor": "Patricia Heaton, Neil Flynn",
+      "credits_selection_version": 2,
+      "score": 13.146,
+      "tmdb_vote_average": 7.6,
+      "tmdb_vote_count": 743,
+      "tmdb_popularity": 59.6628,
       "song": "",
       "song_author": "",
-      "spotify_id": "",
-      "difficulty": 3
+      "spotify_id": ""
     },
     {
       "id": "2673",
@@ -5819,9 +6673,9 @@
       "tmdb_vote_average": 7.7,
       "tmdb_vote_count": 939,
       "tmdb_popularity": 42.1441,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "California - Tchad Blake Remix",
+      "song_author": "Phantom Planet, Tchad Blake",
+      "spotify_id": "5ZujpSYmWYJWUe6WzgkeKq",
       "difficulty": 3
     },
     {
@@ -5843,34 +6697,36 @@
       "tmdb_vote_average": 8.588,
       "tmdb_vote_count": 5245,
       "tmdb_popularity": 88.1156,
-      "song": "",
-      "song_author": "",
+      "song": "The Office - Main Theme",
+      "song_author": "Geek Music",
       "spotify_id": "5qxv6jEm7CMgP663kw09OP",
       "difficulty": 2
     },
     {
-      "id": "250307",
+      "id": "79744",
       "tmdb_type": "tv",
       "type": 2,
-      "poster": "https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
-      "title": "The Pitt",
-      "original_title": "The Pitt",
-      "year": 2025,
-      "date": "2025-01-09",
+      "poster": "https://image.tmdb.org/t/p/w500/g39Rn6PcZjK2yLzz5Z5oBKSpsZR.jpg",
+      "title": "The Rookie",
+      "original_title": "The Rookie",
+      "year": 2018,
+      "date": "2018-10-16",
       "genres": [
-        18
+        80,
+        18,
+        35
       ],
       "director": "<unknown>",
-      "known_actor": "Noah Wyle, Katherine LaNasa",
+      "known_actor": "Nathan Fillion",
       "credits_selection_version": 2,
-      "score": 14.2228,
-      "tmdb_vote_average": 8.7,
-      "tmdb_vote_count": 794,
-      "tmdb_popularity": 55.0111,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 4
+      "score": 15.6327,
+      "tmdb_vote_average": 8.55,
+      "tmdb_vote_count": 3336,
+      "tmdb_popularity": 235.0033,
+      "song": "The Rookie (End Credits)",
+      "song_author": "Jordan Gagne, Alexi Hawley",
+      "spotify_id": "0uvbgfaUpEbnqYAwpHnk62",
+      "difficulty": 5
     },
     {
       "id": "75006",
@@ -5893,9 +6749,9 @@
       "tmdb_vote_average": 8.473,
       "tmdb_vote_count": 9994,
       "tmdb_popularity": 21.5046,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "The Umbrella Academy - Main Theme",
+      "song_author": "Geek Music",
+      "spotify_id": "3SNSdKEXrpATAOY1oszDjv",
       "difficulty": 4
     },
     {
@@ -5919,8 +6775,8 @@
       "tmdb_vote_average": 8.087,
       "tmdb_vote_count": 17891,
       "tmdb_popularity": 103.5039,
-      "song": "",
-      "song_author": "",
+      "song": "Theme from the Walking Dead",
+      "song_author": "Bear McCreary",
       "spotify_id": "2cji350vUbvxQ9QwyL5Nkp",
       "difficulty": 2
     },
@@ -5944,10 +6800,10 @@
       "tmdb_vote_average": 7.909,
       "tmdb_vote_count": 6725,
       "tmdb_popularity": 47.1466,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
-      "difficulty": 3
+      "song": "Toss A Coin To Your Witcher",
+      "song_author": "Sonya Belousova, Giona Ostinelli, Joey Batey",
+      "spotify_id": "2KMLGJ1mPfRE4GNdL92rl3",
+      "difficulty": 4
     },
     {
       "id": "67136",
@@ -5974,6 +6830,34 @@
       "difficulty": 5
     },
     {
+      "id": "68267",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/vdkdcl7R1mL6NPjyzUi1xsNG4b0.jpg",
+      "title": "Trollhunters: Cuentos de Arcadia",
+      "original_title": "Trollhunters: Tales of Arcadia",
+      "year": 2016,
+      "date": "2016-12-23",
+      "genres": [
+        10751,
+        16,
+        10759,
+        35,
+        10765
+      ],
+      "director": "<unknown>",
+      "known_actor": "Lexi Medrano, Charlie Saxton, Amy Landecker",
+      "credits_selection_version": 2,
+      "score": 13.3848,
+      "tmdb_vote_average": 8.457,
+      "tmdb_vote_count": 1149,
+      "tmdb_popularity": 16.5688,
+      "song": "Trollhunters Theme",
+      "song_author": "Alexandre Desplat",
+      "spotify_id": "1PBBMcsKJn6Teu7MsHOuSp",
+      "difficulty": 3
+    },
+    {
       "id": "10545",
       "tmdb_type": "tv",
       "type": 2,
@@ -5994,9 +6878,9 @@
       "tmdb_vote_average": 7.616,
       "tmdb_vote_count": 2073,
       "tmdb_popularity": 38.8227,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "True Blood - The Main Title Theme",
+      "song_author": "TV Themes",
+      "spotify_id": "38IIsK4OdZORdERkEev6pZ",
       "difficulty": 4
     },
     {
@@ -6019,9 +6903,9 @@
       "tmdb_vote_average": 8.294,
       "tmdb_vote_count": 4169,
       "tmdb_popularity": 45.9508,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Far From Any Road",
+      "song_author": "The Handsome Family",
+      "spotify_id": "3LDkLpuxQlEuEiZmkxpr8S",
       "difficulty": 4
     },
     {
@@ -6044,9 +6928,9 @@
       "tmdb_vote_average": 8.296,
       "tmdb_vote_count": 2656,
       "tmdb_popularity": 50.1671,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Tulsa King (Official Theme)",
+      "song_author": "Danny Bensi, Saunder Jurriaans",
+      "spotify_id": "4smWy8ZGHZqV9AOZS5eyYM",
       "difficulty": 3
     },
     {
@@ -6069,9 +6953,9 @@
       "tmdb_vote_average": 8.343,
       "tmdb_vote_count": 2593,
       "tmdb_popularity": 39.8916,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Twin Peaks Theme - Instrumental",
+      "song_author": "Angelo Badalamenti",
+      "spotify_id": "7FO7BolIZsl1o8DDSjeOph",
       "difficulty": 4
     },
     {
@@ -6093,9 +6977,36 @@
       "tmdb_vote_average": 7.389,
       "tmdb_vote_count": 716,
       "tmdb_popularity": 27.7233,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Home Improvement Main Theme (From \"Home Improvement\")",
+      "song_author": "Geek Music",
+      "spotify_id": "6qydUM3Jk7zvkJ24DJ1s4A",
+      "difficulty": 4
+    },
+    {
+      "id": "65294",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/i45WIexRV6vvMVG2c8vzvbKe6AV.jpg",
+      "title": "Una serie de catastróficas desdichas",
+      "original_title": "A Series of Unfortunate Events",
+      "year": 2017,
+      "date": "2017-01-13",
+      "genres": [
+        10759,
+        10751,
+        35,
+        9648
+      ],
+      "director": "<unknown>",
+      "known_actor": "Neil Patrick Harris, Patrick Warburton",
+      "credits_selection_version": 2,
+      "score": 12.325,
+      "tmdb_vote_average": 7.403,
+      "tmdb_vote_count": 1029,
+      "tmdb_popularity": 17.7396,
+      "song": "A Series of Unfortunate Events Theme",
+      "song_author": "The Count",
+      "spotify_id": "15n5s8EtzzqljHQwirILo3",
       "difficulty": 4
     },
     {
@@ -6117,9 +7028,9 @@
       "tmdb_vote_average": 7.834,
       "tmdb_vote_count": 930,
       "tmdb_popularity": 63.0548,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "ER Main Theme (From \"ER\")",
+      "song_author": "Geek Music",
+      "spotify_id": "6Vx0CaKLwQLKzv666NixMs",
       "difficulty": 3
     },
     {
@@ -6175,6 +7086,32 @@
       "difficulty": 3
     },
     {
+      "id": "6066",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/mfRyMbvpssP5vSs3CQaRyGOGpT2.jpg",
+      "title": "Verano Azul",
+      "original_title": "Verano azul",
+      "year": 1981,
+      "date": "1981-10-11",
+      "genres": [
+        35,
+        18,
+        10751
+      ],
+      "director": "<unknown>",
+      "known_actor": "Antonio Ferrandis",
+      "credits_selection_version": 2,
+      "score": 10.4438,
+      "tmdb_vote_average": 7.9,
+      "tmdb_vote_count": 48,
+      "tmdb_popularity": 2.7074,
+      "song": "No Nos Moverán",
+      "song_author": "Banda Municipal de Madrid",
+      "spotify_id": "6lyeWzDhGrinIqAwgNxkhW",
+      "difficulty": 1
+    },
+    {
       "id": "1411",
       "tmdb_type": "tv",
       "type": 2,
@@ -6196,9 +7133,9 @@
       "tmdb_vote_average": 8.1,
       "tmdb_vote_count": 2056,
       "tmdb_popularity": 74.0663,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Person Of Interest",
+      "song_author": "Ramin Djawadi",
+      "spotify_id": "39qMOlPitYSlBs6sShKLKc",
       "difficulty": 4
     },
     {
@@ -6247,9 +7184,9 @@
       "tmdb_vote_average": 8.015,
       "tmdb_vote_count": 2516,
       "tmdb_popularity": 14.2741,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Agnus Dei (Banda Sonora Original de la Serie Vis a Vis) - Urban Version",
+      "song_author": "Cecilia Krull, Mala Rodríguez",
+      "spotify_id": "784nbDVm5AcpToGS6k3c7c",
       "difficulty": 4
     },
     {
@@ -6276,6 +7213,32 @@
       "song": "The Eyes Of The Ranger",
       "song_author": "George McAnthony",
       "spotify_id": "3vcqYT99P6dOsaTaVSF9EI",
+      "difficulty": 4
+    },
+    {
+      "id": "186",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/8QjwQpFllRipS1AbSyp7CO8RmVJ.jpg",
+      "title": "Weeds",
+      "original_title": "Weeds",
+      "year": 2005,
+      "date": "2005-08-07",
+      "genres": [
+        35,
+        80,
+        18
+      ],
+      "director": "<unknown>",
+      "known_actor": "Mary-Louise Parker",
+      "credits_selection_version": 2,
+      "score": 12.7787,
+      "tmdb_vote_average": 7.471,
+      "tmdb_vote_count": 993,
+      "tmdb_popularity": 33.6883,
+      "song": "Little Boxes",
+      "song_author": "Walk off the Earth",
+      "spotify_id": "7h20w92xLFhcyJHW7c1us7",
       "difficulty": 4
     },
     {
@@ -6349,9 +7312,9 @@
       "tmdb_vote_average": 8.269,
       "tmdb_vote_count": 3182,
       "tmdb_popularity": 136.6885,
-      "song": "",
-      "song_author": "",
-      "spotify_id": "",
+      "song": "Yellowstone Theme",
+      "song_author": "Brian Tyler",
+      "spotify_id": "39dFpriXYV9LfUSRJZXqyI",
       "difficulty": 4
     },
     {
@@ -6405,6 +7368,32 @@
       "song_author": "",
       "spotify_id": "",
       "difficulty": 5
+    },
+    {
+      "id": "652",
+      "tmdb_type": "tv",
+      "type": 2,
+      "poster": "https://image.tmdb.org/t/p/w500/qP3DZrKLSPe5WR2N066BIfB2dIq.jpg",
+      "title": "¿Qué hay de nuevo, Scooby-Doo?",
+      "original_title": "What's New, Scooby-Doo?",
+      "year": 2002,
+      "date": "2002-09-14",
+      "genres": [
+        16,
+        10759,
+        9648
+      ],
+      "director": "<unknown>",
+      "known_actor": "Frank Welker",
+      "credits_selection_version": 2,
+      "score": 12.626,
+      "tmdb_vote_average": 7.842,
+      "tmdb_vote_count": 692,
+      "tmdb_popularity": 18.7472,
+      "song": "What's New Scooby-Doo?",
+      "song_author": "Simple Plan",
+      "spotify_id": "6DD5beNG6Ji3AYp5WrYnwD",
+      "difficulty": 1
     },
     {
       "id": "76669",
